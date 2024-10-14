@@ -143,12 +143,13 @@
                     novatrices et performantes qui visent à améliorer leur productivité
                     et à augmenter leurs revenus.
                 </p>
-                <button
+                <a href="#nos-services"
                     class="bg-yellow-500 text-white px-6 py-3 rounded-md hover:bg-orange-600 transition duration-300 w-max opacity-0 transform translate-y-4 transition-all duration-500 ease-out"
                     x-data="{ show: false }" x-init="setTimeout(() => show = true, 900)"
                     x-bind:class="{ 'translate-y-0 opacity-100': show }">
                     Découvrez Nos Solutions
-                </button>
+                </a>
+
             </div>
         </div>
     </section>
@@ -227,9 +228,10 @@
                             processus métiers grâce à des outils appropriés pour vous fournir des solutions sur mesure
                             reliant célérité, sécurité, précision, optimisation des ressources et efficience.</p>
                         <div class="flex space-x-2">
-                            <span class="px-2 py-1 bg-gray-200 text-sm rounded">Site Web</span>
-                            <span class="px-2 py-1 bg-gray-200 text-sm rounded">Application Mobile</span>
-                            <span class="px-2 py-1 bg-gray-200 text-sm rounded">Logiciel</span>
+                            <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Site Web</span>
+                            <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Application
+                                Mobile</span>
+                            <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Logiciel</span>
                         </div>
                     </div>
 
@@ -242,7 +244,8 @@
                                     d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z"
                                     clip-rule="evenodd" />
                             </svg>
-                            <h3 class="text-xl text-indigo-900 font-semibold">Vente de matériel Informatique et de Réseau</h3>
+                            <h3 class="text-xl text-indigo-900 font-semibold">Vente de matériel Informatique et de
+                                Réseau</h3>
                         </div>
                         <p class="text-gray-600 mb-4">Nous vous offrons des gammes complètes de matériels informatiques
                             (ordinateur, serveurs, logiciels, etc.) et de réseau (switch, routeur, firewalls, etc.)
@@ -250,9 +253,9 @@
                             besoins en matériels, en simplifiant le processus d'achat pour l'acquisition à des coûts
                             compétitifs.</p>
                         <div class="flex space-x-2">
-                            <span class="px-2 py-1 bg-gray-200 text-sm rounded">Management</span>
-                            <span class="px-2 py-1 bg-gray-200 text-sm rounded">Installation</span>
-                            <span class="px-2 py-1 bg-gray-200 text-sm rounded">Configuration</span>
+                            <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Management</span>
+                            <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Installation</span>
+                            <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Configuration</span>
                         </div>
                     </div>
 
@@ -273,10 +276,10 @@
                             le respect des budgets et spécifications. Enfin nous offrons de la formation et du transfert
                             de compétence à divers niveaux.</p>
                         <div class="flex space-x-2">
-                            <span class="px-2 py-1 bg-gray-200 text-sm rounded">Stratégie</span>
-                            <span class="px-2 py-1 bg-gray-200 text-sm rounded">Conseil</span>
-                            <span class="px-2 py-1 bg-gray-200 text-sm rounded">Formation</span>
-                            <span class="px-2 py-1 bg-gray-200 text-sm rounded">Compétence</span>
+                            <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Stratégie</span>
+                            <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Conseil</span>
+                            <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Formation</span>
+                            <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Compétence</span>
                         </div>
                     </div>
 
@@ -298,8 +301,8 @@
                             gestion du projet en veillant à ce que les ressources, les délais et les coûts soient
                             maîtrisés.</p>
                         <div class="flex space-x-2">
-                            <span class="px-2 py-1 bg-gray-200 text-sm rounded">Projet</span>
-                            <span class="px-2 py-1 bg-gray-200 text-sm rounded">Assistance</span>
+                            <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Projet</span>
+                            <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Assistance</span>
                         </div>
                     </div>
                 </div>
@@ -495,108 +498,130 @@
             </g>
 
         </svg>
-    
+
         <!-- Contenu -->
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-base text-yellow-500 font-semibold tracking-wide uppercase">PORTFOLIO</h2>
-                <p class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">Les projets réalisés par notre équipe</p>
+                <p class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">Les
+                    projets réalisés par notre équipe</p>
             </div>
-    
+
             <div class="mt-12 relative">
                 <div class="overflow-hidden">
                     <div id="projectsContainer" class="flex space-x-8" id="projectsContainer">
                         <!-- Shop Digit -->
                         <div class="bg-white shadow rounded-lg flex-shrink-0 w-full sm:w-1/3">
-                            <img src="{{ asset('img/keylaShop.jpg') }}" alt="Shop Digit" class="w-full h-48 object-cover">
+                            <img src="{{ asset('img/keylaShop.jpg') }}" alt="Shop Digit"
+                                class="w-full h-48 object-cover">
                             <div class="p-5">
                                 <h3 class="text-xl font-semibold">Shop Digit</h3>
                                 <p class="text-orange-500 uppercase font-semibold">E-COMMERCE</p>
-                                <p class="mt-2 text-gray-600">Développement d'une plateforme de gestion des activités de Keyla Shop pour la structure Keyla Distribution. Vente et gestion de stock aussi bien en direction qu'en agence.</p>
+                                <p class="mt-2 text-gray-600">Développement d'une plateforme de gestion des activités
+                                    de Keyla Shop pour la structure Keyla Distribution. Vente et gestion de stock aussi
+                                    bien en direction qu'en agence.</p>
                                 <div class="mt-4">
-                                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">Plateforme web</span>
-                                    <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-2">PHP</span>
-                                    <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Laravel</span>
+                                    <span
+                                        class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">Plateforme
+                                        web</span>
+                                    <span
+                                        class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-2">PHP</span>
+                                    <span
+                                        class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Laravel</span>
                                 </div>
                             </div>
                         </div>
 
-                         <!-- Master Digit -->
-                         <div class="bg-white shadow rounded-lg flex-shrink-0 w-full sm:w-1/3">
-                            <img src="{{ asset('img/masterDigit.jpg') }}" alt="Shop Digit" class="w-full h-48 object-cover">
+                        <!-- Master Digit -->
+                        <div class="bg-white shadow rounded-lg flex-shrink-0 w-full sm:w-1/3">
+                            <img src="{{ asset('img/file.jpg') }}" alt="Shop Digit" class="w-full h-48 object-cover">
                             <div class="p-5">
                                 <h3 class="text-xl font-semibold">Master Digit</h3>
                                 <p class="text-orange-500 uppercase font-semibold">DIGITALISATION</p>
-                                <p class="mt-2 text-gray-600">Automatisation de tous les processus métiers en mettant à la disposition de la structure Challenge Distribution, une plateforme unique en ligne pour des interactions en temps réel.</p>
+                                <p class="mt-2 text-gray-600">Automatisation de tous les processus métiers en mettant à
+                                    la disposition de la structure Challenge Distribution, une plateforme unique en
+                                    ligne pour des interactions en temps réel.</p>
                                 <div class="mt-4">
-                                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">Plateforme web</span>
-                                    <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Laravel</span>
+                                    <span
+                                        class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">Plateforme
+                                        web</span>
+                                    <span
+                                        class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Laravel</span>
                                 </div>
                             </div>
                         </div>
-    
+
                         <!-- Garage Digit -->
                         <div class="bg-white shadow rounded-lg flex-shrink-0 w-full sm:w-1/3">
-                            <img src="{{ asset('img/garageDigit.jpg') }}" alt="Garage Digit" class="w-full h-48 object-cover">
+                            <img src="{{ asset('img/garageDigit.jpg') }}" alt="Garage Digit"
+                                class="w-full h-48 object-cover">
                             <div class="p-5">
                                 <h3 class="text-xl font-semibold">Garage Digit</h3>
                                 <p class="text-orange-500 uppercase font-semibold">DIGITALISATION</p>
-                                <p class="mt-2 text-gray-600">Transformation digitale d'un des plus importants garages automobiles de Cotonou (ADS Garage). Gestion des entrées et sorties de véhicules avec un suivi en temps réel.</p>
+                                <p class="mt-2 text-gray-600">Transformation digitale d'un des plus importants garages
+                                    automobiles de Cotonou (ADS Garage). Gestion des entrées et sorties de véhicules
+                                    avec un suivi en temps réel.</p>
                                 <div class="mt-4">
-                                    <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">Plateforme web</span>
-                                    <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-2">PHP</span>
-                                    <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Laravel</span>
+                                    <span
+                                        class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">Plateforme
+                                        web</span>
+                                    <span
+                                        class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-2">PHP</span>
+                                    <span
+                                        class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Laravel</span>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-              
+
             </div>
             <!-- Navigation buttons -->
-            <button id="prevButton" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
-                <svg  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <button id="prevButton"
+                class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="h-6 w-6">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
             </button>
-            <button id="nextButton" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
+            <button id="nextButton"
+                class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="h-6 w-6">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
             </button>
         </div>
-        
+
     </section>
 
     <section id="notre-equipe" class="relative overflow-hidden bg-white py-16">
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-center text-yellow-500 text-xl font-semibold text-orange-500 mb-8">DÉCOUVREZ NOTRE ÉQUIPE</h2>
-    
+            <h2 class="text-center text-yellow-500 text-xl font-semibold text-orange-500 mb-8">DÉCOUVREZ NOTRE ÉQUIPE
+            </h2>
+
             <p class="text-center text-gray-700 mb-16 max-w-3xl mx-auto">
                 DADIGITALL c'est une équipe jeune dynamique et innovante, constituée de profils experts et juniors,
-                complémentaires et variés, pour répondre aux besoins contemporains dans le domaine des nouvelles technologies et de
-                l'organisation des entreprises. Elle est constituée d'ingénieurs et de techniciens dynamiques, dévoués et prétris
-                d'expérience. Nous sommes également en partenariat avec plusieurs entreprises de référence en Tunisie pour mutualiser quand
+                complémentaires et variés, pour répondre aux besoins contemporains dans le domaine des nouvelles
+                technologies et de
+                l'organisation des entreprises. Elle est constituée d'ingénieurs et de techniciens dynamiques, dévoués
+                et prétris
+                d'expérience. Nous sommes également en partenariat avec plusieurs entreprises de référence en Tunisie
+                pour mutualiser quand
                 c'est nécessaire les riches expériences et les références acquises.
             </p>
-    
-            <h3 class="text-center text-3xl font-bold text-gray-900 mb-16">La satisfaction de nos clients, Notre Réputation</h3>
-    
+
+            <h3 class="text-center text-3xl font-bold text-gray-900 mb-16">La satisfaction de nos clients, Notre
+                Réputation</h3>
+
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                @foreach ([
-                    ['name' => 'Mathias DEKADJEVI', 'role' => 'CEO Founder', 'image' => 'path/to/mathias-image.jpg'],
-                    ['name' => 'Anselme Victor AKPOVI', 'role' => 'Développeur Web', 'image' => 'path/to/anselme-image.jpg'],
-                    ['name' => 'Shiv GODONOU', 'role' => 'Ingénieur Réseaux informatiques et télécoms', 'image' => 'img/ulysse.jpg'],
-                    ['name' => 'Eden AHOUSSOU', 'role' => 'Développeur Web', 'image' => 'img/eden.jpg'],
-                    ['name' => 'Banel SEMASSOUSSI', 'role' => 'Développeur Web', 'image' => 'img/banel.jpg'],
-                    ['name' => 'Emmeran Malkiel LIMA', 'role' => 'Developpeur frontend', 'image' => 'img/emmeran.jpg'],
-                    ['name' => 'Laurette GANGBADJA', 'role' => 'Sécretaire', 'image' => 'img/laurette.jpg']
-                ] as $member)
+                @foreach ([['name' => 'Mathias DEKADJEVI', 'role' => 'CEO Founder', 'image' => 'path/to/mathias-image.jpg'], ['name' => 'Anselme Victor AKPOVI', 'role' => 'Développeur Web', 'image' => 'path/to/anselme-image.jpg'], ['name' => 'Shiv GODONOU', 'role' => 'Ingénieur Réseaux informatiques et télécoms', 'image' => 'img/ulysse.jpg'], ['name' => 'Eden AHOUSSOU', 'role' => 'Développeur Web', 'image' => 'img/eden.jpg'], ['name' => 'Banel SEMASSOUSSI', 'role' => 'Développeur Web', 'image' => 'img/banel.jpg'], ['name' => 'Emmeran Malkiel LIMA', 'role' => 'Developpeur frontend', 'image' => 'img/emmeran.jpg'], ['name' => 'Laurette GANGBADJA', 'role' => 'Sécretaire', 'image' => 'img/laurette.jpg']] as $member)
                     <div class="flex flex-col items-center space-y-4 group">
-                        <div class="relative w-32 h-40 rounded-full overflow-hidden transition-transform duration-300 transform group-hover:scale-110">
-                            <img src="{{ $member['image'] }}" alt="{{ $member['name'] }}" 
-                                 class="absolute w-full h-full object-cover object-center"
-                                 style="object-position: center;">
+                        <div
+                            class="relative w-32 h-40 rounded-full overflow-hidden transition-transform duration-300 transform group-hover:scale-110">
+                            <img src="{{ $member['image'] }}" alt="{{ $member['name'] }}"
+                                class="absolute w-full h-full object-cover object-center"
+                                style="object-position: center;">
                         </div>
                         <h4 class="font-semibold text-lg text-center">{{ $member['name'] }}</h4>
                         <p class="text-sm text-gray-600 text-center">{{ $member['role'] }}</p>
@@ -632,11 +657,12 @@
         <svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <pattern id="honeycomb" width="56" height="100" patternUnits="userSpaceOnUse">
-                    <path d="M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100" fill="none" stroke="#e2e8f0" stroke-width="1" />
+                    <path d="M28 66L0 50L0 16L28 0L56 16L56 50L28 66L28 100" fill="none" stroke="#e2e8f0"
+                        stroke-width="1" />
                 </pattern>
             </defs>
             <rect width="100%" height="100%" fill="url(#honeycomb)" />
-    
+
             <!-- Animated elements -->
             <g class="animate-pulse">
                 <circle cx="5%" cy="5%" r="50" fill="rgba(249, 115, 22, 0.1)">
@@ -647,83 +673,101 @@
                 </circle>
             </g>
         </svg>
-    
+
         <!-- Content -->
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-base text-yellow-500 font-semibold tracking-wide uppercase">NOTRE BLOG</h2>
-                <p class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">Les récents post de notre blog</p>
+                <p class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">Les
+                    récents post de notre blog</p>
             </div>
-    
+
             <div class="mt-12 relative">
                 <div class="overflow-hidden">
                     <div id="blogPostsContainer" class="flex space-x-8">
                         <!-- Blog Post 1 -->
                         <div class="bg-white shadow rounded-lg flex-shrink-0 w-full sm:w-1/4">
-                            <img src="/placeholder.svg?height=300&width=400" alt="Design Pattern" class="w-full h-48 object-cover">
+                            <img src="{{ asset('img/mtn.jpg') }}?height=300&width=400" alt="Design Pattern"
+                                class="w-full h-48 object-cover">
                             <div class="p-5">
-                                <span class="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded-full mb-2">PROGRAMMATION</span>
+                                <span
+                                    class="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded-full mb-2">PROGRAMMATION</span>
                                 <h3 class="text-xl font-semibold">Design Pattern</h3>
                                 <p class="text-gray-600 text-sm">Par Anselme • 05-09-23 10:23</p>
-                                <p class="mt-2 text-gray-600">Brief description of the blog post about design patterns in programming...</p>
+                                <p class="mt-2 text-gray-600">Brief description of the blog post about design patterns
+                                    in programming...</p>
                             </div>
                         </div>
-    
+
                         <!-- Blog Post 2 -->
                         <div class="bg-white shadow rounded-lg flex-shrink-0 w-full sm:w-1/4">
-                            <img src="/placeholder.svg?height=300&width=400" alt="Design Pattern" class="w-full h-48 object-cover">
+                            <img src="{{ asset('img/mtn.jpg') }}?height=300&width=400" alt="Design Pattern"
+                                class="w-full h-48 object-cover">
                             <div class="p-5">
-                                <span class="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded-full mb-2">PROGRAMMATION</span>
+                                <span
+                                    class="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded-full mb-2">PROGRAMMATION</span>
                                 <h3 class="text-xl font-semibold">Design Pattern</h3>
                                 <p class="text-gray-600 text-sm">Par Fran • 05-09-23 10:22</p>
-                                <p class="mt-2 text-gray-600">Another perspective on design patterns in software development...</p>
+                                <p class="mt-2 text-gray-600">Another perspective on design patterns in software
+                                    development...</p>
                             </div>
                         </div>
-    
+
                         <!-- Blog Post 3 -->
                         <div class="bg-white shadow rounded-lg flex-shrink-0 w-full sm:w-1/4">
-                            <img src="/placeholder.svg?height=300&width=400" alt="Design Pattern" class="w-full h-48 object-cover">
+                            <img src="{{ asset('img/mtn.jpg') }}?height=300&width=400" alt="Design Pattern"
+                                class="w-full h-48 object-cover">
                             <div class="p-5">
-                                <span class="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded-full mb-2">PROGRAMMATION</span>
+                                <span
+                                    class="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded-full mb-2">PROGRAMMATION</span>
                                 <h3 class="text-xl font-semibold">Design Pattern</h3>
                                 <p class="text-gray-600 text-sm">Par Banal • 05-09-23 10:21</p>
-                                <p class="mt-2 text-gray-600">Exploring the practical applications of design patterns...</p>
+                                <p class="mt-2 text-gray-600">Exploring the practical applications of design
+                                    patterns...</p>
                             </div>
                         </div>
-    
+
                         <!-- Blog Post 4 -->
                         <div class="bg-white shadow rounded-lg flex-shrink-0 w-full sm:w-1/4">
-                            <img src="/placeholder.svg?height=300&width=400" alt="Design Pattern" class="w-full h-48 object-cover">
+                            <img src="{{ asset('img/mtn.jpg') }}?height=300&width=400" alt="Design Pattern"
+                                class="w-full h-48 object-cover">
                             <div class="p-5">
-                                <span class="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded-full mb-2">PROGRAMMATION</span>
+                                <span
+                                    class="inline-block bg-purple-600 text-white text-xs px-2 py-1 rounded-full mb-2">PROGRAMMATION</span>
                                 <h3 class="text-xl font-semibold">Design Pattern</h3>
                                 <p class="text-gray-600 text-sm">Par Fran • 05-09-23 10:15</p>
-                                <p class="mt-2 text-gray-600">Advanced techniques in implementing design patterns...</p>
+                                <p class="mt-2 text-gray-600">Advanced techniques in implementing design patterns...
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
-    
-               
-    
-            <div class="text-center mt-8">
-                <button class="bg-yellow-500 text-white px-6 py-2 rounded-md hover:bg-purple-900 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50">
-                    Voir Plus
-                </button>
+
+
+
+                <div class="text-center mt-8">
+                    <button
+                        class="bg-yellow-500 text-white px-6 py-2 rounded-md hover:bg-purple-900 transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-opacity-50">
+                        Voir Plus
+                    </button>
+                </div>
             </div>
+            <!-- Navigation buttons -->
+            <button id="prevBlogButton"
+                class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                </svg>
+            </button>
+            <button id="nextBlogButton"
+                class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                    class="h-6 w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                </svg>
+            </button>
         </div>
-         <!-- Navigation buttons -->
-         <button id="prevBlogButton" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-            </svg>
-        </button>
-        <button id="nextBlogButton" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-6 w-6">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-        </button>
-    </div>
     </section>
 
 
@@ -948,7 +992,7 @@
                 cancelAnimationFrame(animationFrameId);
             };
 
-            
+
         });
 
 
@@ -989,40 +1033,39 @@
         })
 
 
-       document.addEventListener('DOMContentLoaded', function() {
-    const projects = [
-        {
-            title: "Shop Digit",
-            category: "E-COMMERCE",
-            image: "{{ asset('img/keylaShop.jpg') }}",
-            description: "Développement d'une plateforme de gestion des activités de Keyla Shop pour la structure Keyla Distribution. Vente et gestion de stock aussi bien en direction qu'en agence.",
-            tags: ["Plateforme web", "PHP", "Laravel"]
-        },
-        {
-            title: "Master Digit",
-            category: "DIGITALISATION",
-            image: "{{ asset('img/masterDigit.jpg') }}",
-            description: "Automatisation de tous les processus métiers en mettant à la disposition de la structure Challenge Distribution, une plateforme unique en ligne pour des interactions en temps réel.",
-            tags: ["Plateforme web", "Laravel"]
-        },
-        {
-            title: "Garage Digit",
-            category: "DIGITALISATION",
-            image: "{{ asset('img/garageDigit.jpg') }}",
-            description: "Transformation digitale d'un des plus importants garages automobiles de Cotonou (ADS Garage). Gestion des entrées et sorties de véhicules avec un suivi en temps réel.",
-            tags: ["Plateforme web", "PHP", "Laravel"]
-        },
-        // Add more projects here if needed
-    ];
+        document.addEventListener('DOMContentLoaded', function() {
+            const projects = [{
+                    title: "Shop Digit",
+                    category: "E-COMMERCE",
+                    image: "{{ asset('img/keylaShop.jpg') }}",
+                    description: "Développement d'une plateforme de gestion des activités de Keyla Shop pour la structure Keyla Distribution. Vente et gestion de stock aussi bien en direction qu'en agence.",
+                    tags: ["Plateforme web", "PHP", "Laravel"]
+                },
+                {
+                    title: "Master Digit",
+                    category: "DIGITALISATION",
+                    image: "{{ asset('img/file.jpg') }}",
+                    description: "Automatisation de tous les processus métiers en mettant à la disposition de la structure Challenge Distribution, une plateforme unique en ligne pour des interactions en temps réel.",
+                    tags: ["Plateforme web", "Laravel"]
+                },
+                {
+                    title: "Garage Digit",
+                    category: "DIGITALISATION",
+                    image: "{{ asset('img/garageDigit.jpg') }}",
+                    description: "Transformation digitale d'un des plus importants garages automobiles de Cotonou (ADS Garage). Gestion des entrées et sorties de véhicules avec un suivi en temps réel.",
+                    tags: ["Plateforme web", "PHP", "Laravel"]
+                },
+                // Add more projects here if needed
+            ];
 
-    const container = document.getElementById('projectsContainer');
-    const prevButton = document.getElementById('prevButton');
-    const nextButton = document.getElementById('nextButton');
-    let currentIndex = 0;
-    let intervalId;
+            const container = document.getElementById('projectsContainer');
+            const prevButton = document.getElementById('prevButton');
+            const nextButton = document.getElementById('nextButton');
+            let currentIndex = 0;
+            let intervalId;
 
-    function createProjectElement(project) {
-        return `
+            function createProjectElement(project) {
+                return `
             <div class="bg-white shadow rounded-lg flex-shrink-0 w-full sm:w-1/3 px-2">
                 <img src="${project.image}" alt="${project.title}" class="w-full h-48 object-cover">
                 <div class="p-5">
@@ -1035,114 +1078,113 @@
                 </div>
             </div>
         `;
-    }
+            }
 
-    function updateProjects() {
-        container.innerHTML = '';
-        for (let i = 0; i < 3; i++) {
-            const index = (currentIndex + i) % projects.length;
-            container.innerHTML += createProjectElement(projects[index]);
-        }
-    }
+            function updateProjects() {
+                container.innerHTML = '';
+                for (let i = 0; i < 3; i++) {
+                    const index = (currentIndex + i) % projects.length;
+                    container.innerHTML += createProjectElement(projects[index]);
+                }
+            }
 
-    function nextProject() {
-        currentIndex = (currentIndex + 1) % projects.length;
-        updateProjects();
-        container.style.transform = 'translateX(-33.33%)';
-        setTimeout(() => {
-            container.style.transition = 'none';
-            container.style.transform = 'translateX(0)';
-            setTimeout(() => {
-                container.style.transition = 'transform 300ms ease-in-out';
-            }, 50);
-        }, 300);
-    }
+            function nextProject() {
+                currentIndex = (currentIndex + 1) % projects.length;
+                updateProjects();
+                container.style.transform = 'translateX(-33.33%)';
+                setTimeout(() => {
+                    container.style.transition = 'none';
+                    container.style.transform = 'translateX(0)';
+                    setTimeout(() => {
+                        container.style.transition = 'transform 300ms ease-in-out';
+                    }, 50);
+                }, 300);
+            }
 
-    function prevProject() {
-        currentIndex = (currentIndex - 1 + projects.length) % projects.length;
-        updateProjects();
-        container.style.transition = 'none';
-        container.style.transform = 'translateX(-33.33%)';
-        setTimeout(() => {
-            container.style.transition = 'transform 300ms ease-in-out';
-            container.style.transform = 'translateX(0)';
-        }, 50);
-    }
+            function prevProject() {
+                currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+                updateProjects();
+                container.style.transition = 'none';
+                container.style.transform = 'translateX(-33.33%)';
+                setTimeout(() => {
+                    container.style.transition = 'transform 300ms ease-in-out';
+                    container.style.transform = 'translateX(0)';
+                }, 50);
+            }
 
-    function startAutoScroll() {
-        intervalId = setInterval(nextProject, 5000); // Change slide every 5 seconds
-    }
+            function startAutoScroll() {
+                intervalId = setInterval(nextProject, 5000); // Change slide every 5 seconds
+            }
 
-    function stopAutoScroll() {
-        clearInterval(intervalId);
-    }
+            function stopAutoScroll() {
+                clearInterval(intervalId);
+            }
 
-    nextButton.addEventListener('click', () => {
-        stopAutoScroll();
-        nextProject();
-        startAutoScroll();
-    });
+            nextButton.addEventListener('click', () => {
+                stopAutoScroll();
+                nextProject();
+                startAutoScroll();
+            });
 
-    prevButton.addEventListener('click', () => {
-        stopAutoScroll();
-        prevProject();
-        startAutoScroll();
-    });
+            prevButton.addEventListener('click', () => {
+                stopAutoScroll();
+                prevProject();
+                startAutoScroll();
+            });
 
-    // Start auto-scrolling
-    updateProjects();
-    startAutoScroll();
+            // Start auto-scrolling
+            updateProjects();
+            startAutoScroll();
 
-    // Optional: Pause auto-scrolling when hovering over the carousel
-    container.addEventListener('mouseenter', stopAutoScroll);
-    container.addEventListener('mouseleave', startAutoScroll);
-});
+            // Optional: Pause auto-scrolling when hovering over the carousel
+            container.addEventListener('mouseenter', stopAutoScroll);
+            container.addEventListener('mouseleave', startAutoScroll);
+        });
 
-document.addEventListener('DOMContentLoaded', function() {
-    const blogPosts = [
-        {
-            title: "Design Pattern",
-            category: "PROGRAMMATION",
-            image: "/placeholder.svg?height=300&width=400",
-            author: "Anselme",
-            date: "05-09-23 10:23",
-            description: "Brief description of the blog post about design patterns in programming..."
-        },
-        {
-            title: "Design Pattern",
-            category: "PROGRAMMATION",
-            image: "/placeholder.svg?height=300&width=400",
-            author: "Fran",
-            date: "05-09-23 10:22",
-            description: "Another perspective on design patterns in software development..."
-        },
-        {
-            title: "Design Pattern",
-            category: "PROGRAMMATION",
-            image: "/placeholder.svg?height=300&width=400",
-            author: "Banal",
-            date: "05-09-23 10:21",
-            description: "Exploring the practical applications of design patterns..."
-        },
-        {
-            title: "Design Pattern",
-            category: "PROGRAMMATION",
-            image: "/placeholder.svg?height=300&width=400",
-            author: "Fran",
-            date: "05-09-23 10:15",
-            description: "Advanced techniques in implementing design patterns..."
-        }
-        // Add more blog posts here if needed
-    ];
+        document.addEventListener('DOMContentLoaded', function() {
+            const blogPosts = [{
+                    title: "Design Pattern",
+                    category: "PROGRAMMATION",
+                    image: "img/mtn.jpg?height=300&width=400",
+                    author: "Anselme",
+                    date: "05-09-23 10:23",
+                    description: "Brief description of the blog post about design patterns in programming..."
+                },
+                {
+                    title: "Design Pattern",
+                    category: "PROGRAMMATION",
+                    image: "img/mtn.jpg?height=300&width=400",
+                    author: "Fran",
+                    date: "05-09-23 10:22",
+                    description: "Another perspective on design patterns in software development..."
+                },
+                {
+                    title: "Design Pattern",
+                    category: "PROGRAMMATION",
+                    image: "img/mtn.jpg?height=300&width=400",
+                    author: "Banal",
+                    date: "05-09-23 10:21",
+                    description: "Exploring the practical applications of design patterns..."
+                },
+                {
+                    title: "Design Pattern",
+                    category: "PROGRAMMATION",
+                    image: "img/mtn.jpg?height=300&width=400",
+                    author: "Fran",
+                    date: "05-09-23 10:15",
+                    description: "Advanced techniques in implementing design patterns..."
+                }
+                // Add more blog posts here if needed
+            ];
 
-    const container = document.getElementById('blogPostsContainer');
-    const prevButton = document.getElementById('prevBlogButton');
-    const nextButton = document.getElementById('nextBlogButton');
-    let currentIndex = 0;
-    let intervalId;
+            const container = document.getElementById('blogPostsContainer');
+            const prevButton = document.getElementById('prevBlogButton');
+            const nextButton = document.getElementById('nextBlogButton');
+            let currentIndex = 0;
+            let intervalId;
 
-    function createBlogPostElement(post) {
-        return `
+            function createBlogPostElement(post) {
+                return `
             <div class="bg-white shadow rounded-lg flex-shrink-0 w-full sm:w-1/4 px-2">
                 <img src="${post.image}" alt="${post.title}" class="w-full h-48 object-cover">
                 <div class="p-5">
@@ -1153,67 +1195,67 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
             </div>
         `;
-    }
+            }
 
-    function updateBlogPosts() {
-        container.innerHTML = '';
-        for (let i = 0; i < 4; i++) {
-            const index = (currentIndex + i) % blogPosts.length;
-            container.innerHTML += createBlogPostElement(blogPosts[index]);
-        }
-    }
+            function updateBlogPosts() {
+                container.innerHTML = '';
+                for (let i = 0; i < 4; i++) {
+                    const index = (currentIndex + i) % blogPosts.length;
+                    container.innerHTML += createBlogPostElement(blogPosts[index]);
+                }
+            }
 
-    function nextBlogPost() {
-        currentIndex = (currentIndex + 1) % blogPosts.length;
-        updateBlogPosts();
-        container.style.transform = 'translateX(-25%)';
-        setTimeout(() => {
-            container.style.transition = 'none';
-            container.style.transform = 'translateX(0)';
-            setTimeout(() => {
-                container.style.transition = 'transform 300ms ease-in-out';
-            }, 50);
-        }, 300);
-    }
+            function nextBlogPost() {
+                currentIndex = (currentIndex + 1) % blogPosts.length;
+                updateBlogPosts();
+                container.style.transform = 'translateX(-25%)';
+                setTimeout(() => {
+                    container.style.transition = 'none';
+                    container.style.transform = 'translateX(0)';
+                    setTimeout(() => {
+                        container.style.transition = 'transform 300ms ease-in-out';
+                    }, 50);
+                }, 300);
+            }
 
-    function prevBlogPost() {
-        currentIndex = (currentIndex - 1 + blogPosts.length) % blogPosts.length;
-        updateBlogPosts();
-        container.style.transition = 'none';
-        container.style.transform = 'translateX(-25%)';
-        setTimeout(() => {
-            container.style.transition = 'transform 300ms ease-in-out';
-            container.style.transform = 'translateX(0)';
-        }, 50);
-    }
+            function prevBlogPost() {
+                currentIndex = (currentIndex - 1 + blogPosts.length) % blogPosts.length;
+                updateBlogPosts();
+                container.style.transition = 'none';
+                container.style.transform = 'translateX(-25%)';
+                setTimeout(() => {
+                    container.style.transition = 'transform 300ms ease-in-out';
+                    container.style.transform = 'translateX(0)';
+                }, 50);
+            }
 
-    function startAutoScroll() {
-        intervalId = setInterval(nextBlogPost, 5000); // Change slide every 5 seconds
-    }
+            function startAutoScroll() {
+                intervalId = setInterval(nextBlogPost, 5000); // Change slide every 5 seconds
+            }
 
-    function stopAutoScroll() {
-        clearInterval(intervalId);
-    }
+            function stopAutoScroll() {
+                clearInterval(intervalId);
+            }
 
-    nextButton.addEventListener('click', () => {
-        stopAutoScroll();
-        nextBlogPost();
-        startAutoScroll();
-    });
+            nextButton.addEventListener('click', () => {
+                stopAutoScroll();
+                nextBlogPost();
+                startAutoScroll();
+            });
 
-    prevButton.addEventListener('click', () => {
-        stopAutoScroll();
-        prevBlogPost();
-        startAutoScroll();
-    });
+            prevButton.addEventListener('click', () => {
+                stopAutoScroll();
+                prevBlogPost();
+                startAutoScroll();
+            });
 
-    // Start auto-scrolling
-    updateBlogPosts();
-    startAutoScroll();
+            // Start auto-scrolling
+            updateBlogPosts();
+            startAutoScroll();
 
-    // Optional: Pause auto-scrolling when hovering over the carousel
-    container.addEventListener('mouseenter', stopAutoScroll);
-    container.addEventListener('mouseleave', startAutoScroll);
-});
+            // Optional: Pause auto-scrolling when hovering over the carousel
+            container.addEventListener('mouseenter', stopAutoScroll);
+            container.addEventListener('mouseleave', startAutoScroll);
+        });
     </script>
 @endpush

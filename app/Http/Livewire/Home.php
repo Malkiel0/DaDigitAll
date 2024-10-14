@@ -3,20 +3,15 @@
 namespace App\Http\Livewire;
 
 use Livewire\Component;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\ContactFormSubmitted;
+use App\Mail\ContactFormConfirmation;
 
 class Home extends Component
 {
     
 
     public $showContent = false;
-
-    
-
-    public function mount()
-    {
-        $this->showContent = true;
-    }
-
     public $name = '';
     public $email = '';
     public $message = '';
@@ -27,12 +22,20 @@ class Home extends Component
         'message' => 'required|min:10',
     ];
 
+    public function mount()
+    {
+        $this->showContent = true;
+    }
+
     public function submit()
     {
         $this->validate();
 
-        // Logique d'envoi du message ici
-        // Par exemple, vous pourriez enregistrer dans la base de données ou envoyer un e-mail
+        // Send email to admin
+        Mail::to('Malkiellima@gmail.com')->send(new ContactFormSubmitted($this->name, $this->email, $this->message));
+
+        // Send confirmation email to user
+        Mail::to($this->email)->send(new ContactFormConfirmation($this->name));
 
         session()->flash('message', 'Votre message a été envoyé avec succès!');
 

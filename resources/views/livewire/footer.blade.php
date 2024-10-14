@@ -9,7 +9,7 @@
                 @for ($i = 0; $i < 20; $i++)
                     <circle cx="{{ rand(0, 100) }}%" cy="{{ rand(0, 100) }}%" r="1" fill="#0066cc" opacity="0.3" />
                 @endfor
-                @for ($i = 0; $i < 15; $i++)
+                @for ($i = 0; $i < 30; $i++)
                     <path d="M{{ rand(0, 100) }},{{ rand(0, 100) }} Q{{ rand(0, 100) }},{{ rand(0, 100) }} {{ rand(0, 100) }},{{ rand(0, 100) }}" stroke="#0066cc" stroke-width="0.5" fill="none" opacity="0.2" />
                 @endfor
             </g>
