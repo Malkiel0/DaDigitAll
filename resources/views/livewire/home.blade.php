@@ -124,7 +124,7 @@
             <div class="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-12">
                 <h2 class="text-yellow-500 font-bold mb-4 text-xl opacity-0 transform translate-y-4 transition-all duration-500 ease-out"
                     x-data="{ show: false }" x-init="setTimeout(() => show = true, 100)" x-bind:class="{ 'translate-y-0 opacity-100': show }">
-                    DADIGITALL
+                    <span class="text-yellow-500">DA</span> <span class="text-indigo-900">DIGIT ALL</span>
                 </h2>
                 <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-white opacity-0 transform translate-y-4 transition-all duration-500 ease-out"
                     x-data="{ show: false }" x-init="setTimeout(() => show = true, 300)"
@@ -347,76 +347,111 @@
             <!-- Colonne de gauche avec les logos technologiques -->
             <div class="w-full md:w-1/2 relative h-96">
                 <svg class="w-full h-full" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Shopify logo -->
-                    <circle cx="80" cy="100" r="40" fill="#7AB55C">
-                        <animateTransform attributeName="transform" type="translate" values="0,0; 5,-5; 0,0"
-                            dur="3s" repeatCount="indefinite" />
-                        <animate attributeName="opacity" values="0.8;1;0.8" dur="3s"
-                            repeatCount="indefinite" />
+                    <defs>
+                        <path id="circlePath" d="M200,200 m-150,0 a150,150 0 1,0 300,0 a150,150 0 1,0 -300,0" fill="none"/>
+                    </defs>
+                
+                    <!-- Connecting lines -->
+                    <path d="M200,200 m-150,0 a150,150 0 1,0 300,0 a150,150 0 1,0 -300,0" fill="none" stroke="#ccc" stroke-width="2"/>
+                
+                    <!-- Moving dot -->
+                    <circle r="5">
+                        <animateMotion dur="10s" repeatCount="indefinite">
+                            <mpath href="#circlePath"/>
+                        </animateMotion>
+                        <animate attributeName="fill" dur="10s" repeatCount="indefinite"
+                                 values="#F0DB4F;#777BB3;#000000;#96588A;#61dafb;#FF2D20;#21759B;#F0DB4F"/>
                     </circle>
-                    <path d="M60 100 L70 90 L80 100 L90 90 L100 100" stroke="white" stroke-width="3" fill="none">
-                        <animate attributeName="stroke-width" values="3;4;3" dur="3s"
-                            repeatCount="indefinite" />
-                    </path>
-
+                
                     <!-- JS logo -->
-                    <circle cx="50" cy="250" r="30" fill="#F0DB4F">
-                        <animateTransform attributeName="transform" type="translate" values="0,0; -5,5; 0,0"
-                            dur="4s" repeatCount="indefinite" />
-                        <animate attributeName="opacity" values="0.8;1;0.8" dur="4s"
-                            repeatCount="indefinite" />
-                    </circle>
-                    <text x="50" y="260" text-anchor="middle" fill="black" font-size="24"
-                        font-weight="bold">JS</text>
-
+                    <g transform="translate(200, 50)">
+                        <circle r="30" fill="#F0DB4F">
+                            <animateTransform attributeName="transform" type="translate" values="0,0; -5,5; 0,0"
+                                dur="4s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite"/>
+                        </circle>
+                        <text y="10" text-anchor="middle" fill="black" font-size="24" font-weight="bold">JS</text>
+                    </g>
+                
                     <!-- PHP logo -->
-                    <circle cx="300" cy="150" r="50" fill="#777BB3">
-                        <animateTransform attributeName="transform" type="translate" values="0,0; 8,-3; 0,0"
-                            dur="5s" repeatCount="indefinite" />
-                        <animate attributeName="opacity" values="0.8;1;0.8" dur="5s"
-                            repeatCount="indefinite" />
-                    </circle>
-                    <text x="300" y="165" text-anchor="middle" fill="white" font-size="36"
-                        font-weight="bold">php</text>
-
+                    <g transform="translate(338, 150)">
+                        <circle r="30" fill="#777BB3">
+                            <animateTransform attributeName="transform" type="translate" values="0,0; 8,-3; 0,0"
+                                dur="5s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="5s" repeatCount="indefinite"/>
+                        </circle>
+                        <text y="10" text-anchor="middle" fill="white" font-size="24" font-weight="bold">PHP</text>
+                    </g>
+                
                     <!-- iOS logo -->
-                    <circle cx="320" cy="300" r="35" fill="#000000">
-                        <animateTransform attributeName="transform" type="translate" values="0,0; -6,6; 0,0"
-                            dur="3.5s" repeatCount="indefinite" />
-                        <animate attributeName="opacity" values="0.8;1;0.8" dur="3.5s"
-                            repeatCount="indefinite" />
-                    </circle>
-                    <text x="320" y="310" text-anchor="middle" fill="white" font-size="24">iOS</text>
-
+                    <g transform="translate(338, 250)">
+                        <circle r="30" fill="#000000">
+                            <animateTransform attributeName="transform" type="translate" values="0,0; -6,6; 0,0"
+                                dur="3.5s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3.5s" repeatCount="indefinite"/>
+                        </circle>
+                        <text y="10" text-anchor="middle" fill="white" font-size="24">iOS</text>
+                    </g>
+                
                     <!-- WooCommerce logo -->
-                    <circle cx="180" cy="350" r="45" fill="#96588A">
-                        <animateTransform attributeName="transform" type="translate" values="0,0; 7,-7; 0,0"
-                            dur="4.5s" repeatCount="indefinite" />
-                        <animate attributeName="opacity" values="0.8;1;0.8" dur="4.5s"
-                            repeatCount="indefinite" />
-                    </circle>
-                    <text x="180" y="365" text-anchor="middle" fill="white" font-size="24"
-                        font-weight="bold">Woo</text>
-
-                    <!-- React logo -->
-                    <circle cx="150" cy="80" r="35" fill="#61DAFB">
-                        <animateTransform attributeName="transform" type="translate" values="0,0; -4,4; 0,0"
-                            dur="3.8s" repeatCount="indefinite" />
-                        <animate attributeName="opacity" values="0.8;1;0.8" dur="3.8s"
-                            repeatCount="indefinite" />
-                    </circle>
-                    <path d="M140 80 C140 70, 160 70, 160 80" stroke="black" stroke-width="2" fill="none">
-                        <animate attributeName="stroke-width" values="2;3;2" dur="3.8s"
-                            repeatCount="indefinite" />
-                    </path>
-                    <circle cx="150" cy="77" r="3" fill="black" />
+                    <g transform="translate(200, 350)">
+                        <circle r="30" fill="#96588A">
+                            <animateTransform attributeName="transform" type="translate" values="0,0; 7,-7; 0,0"
+                                dur="4.5s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4.5s" repeatCount="indefinite"/>
+                        </circle>
+                        <text y="10" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Woo</text>
+                    </g>
+                
+                    <!-- React logo (blue circle, white logo) -->
+                    <g transform="translate(62, 250)">
+                        <circle r="30" fill="#61dafb">
+                            <animateTransform attributeName="transform" type="translate" values="0,0; -4,4; 0,0"
+                                dur="3.8s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3.8s" repeatCount="indefinite"/>
+                        </circle>
+                        <g transform="scale(0.15)">
+                            <circle cx="0" cy="0" r="20" fill="white"/>
+                            <g stroke="white" stroke-width="10" fill="none">
+                                <ellipse rx="110" ry="42">
+                                    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+                                </ellipse>
+                                <ellipse rx="110" ry="42" transform="rotate(60)">
+                                    <animateTransform attributeName="transform" type="rotate" from="60" to="420" dur="10s" repeatCount="indefinite"/>
+                                </ellipse>
+                                <ellipse rx="110" ry="42" transform="rotate(120)">
+                                    <animateTransform attributeName="transform" type="rotate" from="120" to="480" dur="10s" repeatCount="indefinite"/>
+                                </ellipse>
+                            </g>
+                        </g>
+                    </g>
+                
+                    <!-- Laravel logo -->
+                    <g transform="translate(62, 150)">
+                        <circle r="30" fill="#FF2D20">
+                            <animateTransform attributeName="transform" type="translate" values="0,0; 5,-5; 0,0"
+                                dur="4.2s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4.2s" repeatCount="indefinite"/>
+                        </circle>
+                        <text y="10" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Laravel</text>
+                    </g>
+                
+                    <!-- WordPress logo -->
+                    <g transform="translate(200, 200)">
+                        <circle r="30" fill="#21759B">
+                            <animateTransform attributeName="transform" type="translate" values="0,0; -6,-6; 0,0"
+                                dur="4.7s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4.7s" repeatCount="indefinite"/>
+                        </circle>
+                        <text y="10" text-anchor="middle" fill="white" font-size="16" font-weight="bold">WP</text>
+                    </g>
                 </svg>
             </div>
 
             <!-- Colonne de droite avec le texte -->
             <div class="w-full md:w-1/2 mt-8 md:mt-0 md:pl-8">
-                <h2 class="text-2xl text-yellow-500 font-bold text-orange-500 mb-2 animate-fade-in-up">POURQUOI
-                    DADIGITALL ?</h2>
+                <h2 class="text-2xl text-black font-bold text-orange-500 mb-2 animate-fade-in-up">POURQUOI
+                    <span class="text-yellow-500">DA</span> <span class="text-indigo-900">DIGIT ALL</span>  ?</h2>
                 <h1 class="text-4xl font-bold mb-4 animate-fade-in-up" style="animation-delay: 0.2s;">Faites évoluer
                     votre entreprise</h1>
                 <h3 class="text-2xl mb-6 animate-fade-in-up" style="animation-delay: 0.4s;">avec des technologies
@@ -601,7 +636,7 @@
             </h2>
 
             <p class="text-center text-gray-700 mb-16 max-w-3xl mx-auto">
-                DADIGITALL c'est une équipe jeune dynamique et innovante, constituée de profils experts et juniors,
+                <span class="text-yellow-500">DA</span> <span class="text-indigo-900">DIGIT ALL</span> c'est une équipe de jeune dynamique et innovante, constituée de profils experts et juniors,
                 complémentaires et variés, pour répondre aux besoins contemporains dans le domaine des nouvelles
                 technologies et de
                 l'organisation des entreprises. Elle est constituée d'ingénieurs et de techniciens dynamiques, dévoués
@@ -615,7 +650,7 @@
                 Réputation</h3>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                @foreach ([['name' => 'Mathias DEKADJEVI', 'role' => 'CEO Founder', 'image' => 'path/to/mathias-image.jpg'], ['name' => 'Anselme Victor AKPOVI', 'role' => 'Développeur Web', 'image' => 'path/to/anselme-image.jpg'], ['name' => 'Shiv GODONOU', 'role' => 'Ingénieur Réseaux informatiques et télécoms', 'image' => 'img/ulysse.jpg'], ['name' => 'Eden AHOUSSOU', 'role' => 'Développeur Web', 'image' => 'img/eden.jpg'], ['name' => 'Banel SEMASSOUSSI', 'role' => 'Développeur Web', 'image' => 'img/banel.jpg'], ['name' => 'Emmeran Malkiel LIMA', 'role' => 'Developpeur frontend', 'image' => 'img/emmeran.jpg'], ['name' => 'Laurette GANGBADJA', 'role' => 'Sécretaire', 'image' => 'img/laurette.jpg']] as $member)
+                @foreach ([['name' => 'Mathias DEKADJEVI', 'role' => 'CEO Founder', 'image' => 'img/mathias.jpg'], ['name' => 'Anselme Victor AKPOVI', 'role' => 'Développeur Web', 'image' => 'img/anselme.jpg'], ['name' => 'Shiv GODONOU', 'role' => 'Ingénieur Réseaux informatiques et télécoms', 'image' => 'img/ulysse.jpg'], ['name' => 'Eden AHOUSSOU', 'role' => 'Développeur Web', 'image' => 'img/eden.jpg'], ['name' => 'Banel SEMASSOUSSI', 'role' => 'Développeur Web', 'image' => 'img/banel.jpg'], ['name' => 'Emmeran Malkiel LIMA', 'role' => 'Developpeur frontend', 'image' => 'img/emmeran.jpg'], ['name' => 'Laurette GANGBADJA', 'role' => 'Assistante de direction', 'image' => 'img/laurette.jpg']] as $member)
                     <div class="flex flex-col items-center space-y-4 group">
                         <div
                             class="relative w-32 h-40 rounded-full overflow-hidden transition-transform duration-300 transform group-hover:scale-110">
@@ -1044,7 +1079,7 @@
                 {
                     title: "Master Digit",
                     category: "DIGITALISATION",
-                    image: "{{ asset('img/file.jpg') }}",
+                    image: "{{ asset('img/file.png') }}",
                     description: "Automatisation de tous les processus métiers en mettant à la disposition de la structure Challenge Distribution, une plateforme unique en ligne pour des interactions en temps réel.",
                     tags: ["Plateforme web", "Laravel"]
                 },
