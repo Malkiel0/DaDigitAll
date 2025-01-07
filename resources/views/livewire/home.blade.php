@@ -110,6 +110,96 @@
         .wave-animation {
             animation: wave 5s ease-in-out infinite;
         }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        .pulse {
+            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+         /* Mobile-first design */
+    #trusted-companies {
+        position: relative;
+        background-color: #1a202c;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+
+    h2 {
+        font-size: 2.5rem; /* Titre ajusté pour mobile */
+    }
+
+    /* Grille des logos */
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* Par défaut, 4 colonnes */
+        gap: 1rem;
+    }
+
+    /* Responsive pour les petites tablettes */
+    @media (max-width: 640px) {
+        h2 {
+            font-size: 1.875rem; /* Taille plus petite pour les petits écrans */
+        }
+        .grid {
+            grid-template-columns: 1fr; /* Sur les petits écrans, une seule colonne */
+        }
+    }
+
+    /* Responsive pour tablettes et petits écrans */
+    @media (max-width: 768px) {
+        .grid {
+            grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
+        }
+    }
+
+    /* Responsive pour écrans moyens (tablettes en paysage ou petits ordinateurs portables) */
+    @media (min-width: 1024px) {
+        .grid {
+            grid-template-columns: repeat(4, 1fr); /* Retour à 4 colonnes sur les écrans larges */
+        }
+    }
+
+    /* Responsive pour l'élément SVG */
+    @media (max-width: 640px) {
+        svg {
+            height: 5rem; /* Plus petit sur les petits écrans */
+        }
+    }
+
+    @media (min-width: 1024px) {
+        svg {
+            height: 6rem; /* Taille plus grande pour les grands écrans */
+        }
+    }
     </style>
 @endpush
 
@@ -348,100 +438,115 @@
             <div class="w-full md:w-1/2 relative h-96">
                 <svg class="w-full h-full" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
                     <defs>
-                        <path id="circlePath" d="M200,200 m-150,0 a150,150 0 1,0 300,0 a150,150 0 1,0 -300,0" fill="none"/>
+                        <path id="circlePath" d="M200,200 m-150,0 a150,150 0 1,0 300,0 a150,150 0 1,0 -300,0"
+                            fill="none" />
                     </defs>
-                
+
                     <!-- Connecting lines -->
-                    <path d="M200,200 m-150,0 a150,150 0 1,0 300,0 a150,150 0 1,0 -300,0" fill="none" stroke="#ccc" stroke-width="2"/>
-                
+                    <path d="M200,200 m-150,0 a150,150 0 1,0 300,0 a150,150 0 1,0 -300,0" fill="none"
+                        stroke="#ccc" stroke-width="2" />
+
                     <!-- Moving dot -->
                     <circle r="5">
                         <animateMotion dur="10s" repeatCount="indefinite">
-                            <mpath href="#circlePath"/>
+                            <mpath href="#circlePath" />
                         </animateMotion>
                         <animate attributeName="fill" dur="10s" repeatCount="indefinite"
-                                 values="#F0DB4F;#777BB3;#000000;#96588A;#61dafb;#FF2D20;#21759B;#F0DB4F"/>
+                            values="#F0DB4F;#777BB3;#000000;#96588A;#61dafb;#FF2D20;#21759B;#F0DB4F" />
                     </circle>
-                
+
                     <!-- JS logo -->
                     <g transform="translate(200, 50)">
                         <circle r="30" fill="#F0DB4F">
                             <animateTransform attributeName="transform" type="translate" values="0,0; -5,5; 0,0"
                                 dur="4s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4s"
+                                repeatCount="indefinite" />
                         </circle>
                         <text y="10" text-anchor="middle" fill="black" font-size="24" font-weight="bold">JS</text>
                     </g>
-                
+
                     <!-- PHP logo -->
                     <g transform="translate(338, 150)">
                         <circle r="30" fill="#777BB3">
                             <animateTransform attributeName="transform" type="translate" values="0,0; 8,-3; 0,0"
                                 dur="5s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="5s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="5s"
+                                repeatCount="indefinite" />
                         </circle>
-                        <text y="10" text-anchor="middle" fill="white" font-size="24" font-weight="bold">PHP</text>
+                        <text y="10" text-anchor="middle" fill="white" font-size="24"
+                            font-weight="bold">PHP</text>
                     </g>
-                
+
                     <!-- iOS logo -->
                     <g transform="translate(338, 250)">
                         <circle r="30" fill="#000000">
                             <animateTransform attributeName="transform" type="translate" values="0,0; -6,6; 0,0"
                                 dur="3.5s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3.5s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3.5s"
+                                repeatCount="indefinite" />
                         </circle>
                         <text y="10" text-anchor="middle" fill="white" font-size="24">iOS</text>
                     </g>
-                
+
                     <!-- WooCommerce logo -->
                     <g transform="translate(200, 350)">
                         <circle r="30" fill="#96588A">
                             <animateTransform attributeName="transform" type="translate" values="0,0; 7,-7; 0,0"
                                 dur="4.5s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4.5s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4.5s"
+                                repeatCount="indefinite" />
                         </circle>
-                        <text y="10" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Woo</text>
+                        <text y="10" text-anchor="middle" fill="white" font-size="18"
+                            font-weight="bold">Woo</text>
                     </g>
-                
+
                     <!-- React logo (blue circle, white logo) -->
                     <g transform="translate(62, 250)">
                         <circle r="30" fill="#61dafb">
                             <animateTransform attributeName="transform" type="translate" values="0,0; -4,4; 0,0"
                                 dur="3.8s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3.8s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3.8s"
+                                repeatCount="indefinite" />
                         </circle>
                         <g transform="scale(0.15)">
-                            <circle cx="0" cy="0" r="20" fill="white"/>
+                            <circle cx="0" cy="0" r="20" fill="white" />
                             <g stroke="white" stroke-width="10" fill="none">
                                 <ellipse rx="110" ry="42">
-                                    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+                                    <animateTransform attributeName="transform" type="rotate" from="0"
+                                        to="360" dur="10s" repeatCount="indefinite" />
                                 </ellipse>
                                 <ellipse rx="110" ry="42" transform="rotate(60)">
-                                    <animateTransform attributeName="transform" type="rotate" from="60" to="420" dur="10s" repeatCount="indefinite"/>
+                                    <animateTransform attributeName="transform" type="rotate" from="60"
+                                        to="420" dur="10s" repeatCount="indefinite" />
                                 </ellipse>
                                 <ellipse rx="110" ry="42" transform="rotate(120)">
-                                    <animateTransform attributeName="transform" type="rotate" from="120" to="480" dur="10s" repeatCount="indefinite"/>
+                                    <animateTransform attributeName="transform" type="rotate" from="120"
+                                        to="480" dur="10s" repeatCount="indefinite" />
                                 </ellipse>
                             </g>
                         </g>
                     </g>
-                
+
                     <!-- Laravel logo -->
                     <g transform="translate(62, 150)">
                         <circle r="30" fill="#FF2D20">
                             <animateTransform attributeName="transform" type="translate" values="0,0; 5,-5; 0,0"
                                 dur="4.2s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4.2s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4.2s"
+                                repeatCount="indefinite" />
                         </circle>
-                        <text y="10" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Laravel</text>
+                        <text y="10" text-anchor="middle" fill="white" font-size="18"
+                            font-weight="bold">Laravel</text>
                     </g>
-                
+
                     <!-- WordPress logo -->
                     <g transform="translate(200, 200)">
                         <circle r="30" fill="#21759B">
                             <animateTransform attributeName="transform" type="translate" values="0,0; -6,-6; 0,0"
                                 dur="4.7s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4.7s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4.7s"
+                                repeatCount="indefinite" />
                         </circle>
                         <text y="10" text-anchor="middle" fill="white" font-size="16" font-weight="bold">WP</text>
                     </g>
@@ -451,7 +556,8 @@
             <!-- Colonne de droite avec le texte -->
             <div class="w-full md:w-1/2 mt-8 md:mt-0 md:pl-8">
                 <h2 class="text-2xl text-black font-bold text-orange-500 mb-2 animate-fade-in-up">POURQUOI
-                    <span class="text-yellow-500">DA</span> <span class="text-indigo-900">DIGIT ALL</span>  ?</h2>
+                    <span class="text-yellow-500">DA</span> <span class="text-indigo-900">DIGIT ALL</span> ?
+                </h2>
                 <h1 class="text-4xl font-bold mb-4 animate-fade-in-up" style="animation-delay: 0.2s;">Faites évoluer
                     votre entreprise</h1>
                 <h3 class="text-2xl mb-6 animate-fade-in-up" style="animation-delay: 0.4s;">avec des technologies
@@ -636,7 +742,8 @@
             </h2>
 
             <p class="text-center text-gray-700 mb-16 max-w-3xl mx-auto">
-                <span class="text-yellow-500">DA</span> <span class="text-indigo-900">DIGIT ALL</span> c'est une équipe de jeune dynamique et innovante, constituée de profils experts et juniors,
+                <span class="text-yellow-500">DA</span> <span class="text-indigo-900">DIGIT ALL</span> c'est une
+                équipe de jeune dynamique et innovante, constituée de profils experts et juniors,
                 complémentaires et variés, pour répondre aux besoins contemporains dans le domaine des nouvelles
                 technologies et de
                 l'organisation des entreprises. Elle est constituée d'ingénieurs et de techniciens dynamiques, dévoués
@@ -684,6 +791,59 @@
             </div>
         </div>
     </section>
+
+
+    <!-- Nouvelle section pour les entreprises de confiance -->
+    <div>
+        <section id="trusted-companies"
+            class="relative py-24 overflow-hidden bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-700">
+            <div class="absolute inset-0 bg-[url('/img/circuit-pattern.svg')] opacity-10"></div>
+            <div class="container mx-auto px-4 relative z-10">
+                <h2 id="trusted-companies-title" class="text-5xl font-extrabold text-center mb-16 text-white opacity-0 transform translate-y-10 transition-all duration-1000 ease-out">
+                    Ils nous font confiance
+                </h2>
+                <div class="relative" x-data="{ activeIndex: 0 }" x-init="setInterval(() => { activeIndex = (activeIndex + 1) % {{ count($companies) }} }, 3000)">
+                    <div class="flex justify-center items-center h-96">
+                        @foreach ($companies as $index => $company)
+                            <div class="absolute transition-all duration-1000 ease-in-out transform"
+                                :class="{
+                                    'opacity-100 scale-100': activeIndex === {{ $index }},
+                                    'opacity-0 scale-90': activeIndex !== {{ $index }},
+                                    'translate-x-0': activeIndex === {{ $index }},
+                                    '-translate-x-full': (activeIndex > {{ $index }} || (activeIndex === 0 &&
+                                        {{ $index }} === {{ count($companies) - 1 }})),
+                                    'translate-x-full': (activeIndex < {{ $index }} && !(activeIndex === 0 &&
+                                        {{ $index }} === {{ count($companies) - 1 }}))
+                                }">
+                                <img src="{{ $company['logo'] }}" alt="{{ $company['name'] }}"
+                                    class="h-32 w-auto object-contain filter drop-shadow-2xl">
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="mt-16 mb-12 grid grid-cols-4 gap-8">
+                    @foreach ($companies as $index => $company)
+                        <div class="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-xl p-6 transform transition-all duration-300 hover:scale-105 hover:bg-opacity-20"
+                            x-data="{ isHovered: false }" @mouseenter="isHovered = true" @mouseleave="isHovered = false">
+                            <img src="{{ $company['logo'] }}" alt="{{ $company['name'] }}"
+                                class="h-16 w-auto object-contain mx-auto mb-4 transition-all duration-300"
+                                :class="{ 'filter grayscale': !isHovered }">
+                            <p class="text-center text-white font-semibold opacity-0 transform translate-y-4 transition-all duration-300"
+                                :class="{ 'opacity-100 translate-y-0': isHovered }">{{ $company['name'] }}</p>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+            <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none transform rotate-180">
+                <svg class="relative block w-full h-24" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="fill-current text-gray-100"></path>
+                </svg>
+            </div>
+        </section>
+    </div>
 
 
 
@@ -804,6 +964,7 @@
             </button>
         </div>
     </section>
+
 
 
 
@@ -1084,6 +1245,20 @@
                     tags: ["Plateforme web", "Laravel"]
                 },
                 {
+                    title: "Master Digit(Mobile)",
+                    category: "DIGITALISATION",
+                    image: "{{ asset('img/dsaAccueil.png') }}",
+                    description: "Automatisation de tous les processus métiers en mettant à la disposition de la structure Challenge Distribution, une plateforme unique en ligne pour des interactions en temps réel.",
+                    tags: ["Plateforme web", "Laravel"]
+                },
+                {
+                    title: "Stock Digit",
+                    category: "DIGITALISATION",
+                    image: "{{ asset('img/stockDigit.png') }}",
+                    description: "Automatisation de tous les processus métiers en mettant à la disposition de la structure Challenge Distribution, une plateforme unique en ligne pour des interactions en temps réel.",
+                    tags: ["Plateforme web", "Laravel"]
+                },
+                {
                     title: "Garage Digit",
                     category: "DIGITALISATION",
                     image: "{{ asset('img/garageDigit.jpg') }}",
@@ -1292,5 +1467,27 @@
             container.addEventListener('mouseenter', stopAutoScroll);
             container.addEventListener('mouseleave', startAutoScroll);
         });
+
+        document.addEventListener('DOMContentLoaded', function () {
+        const title = document.getElementById('trusted-companies-title'); // Sélectionner l'élément H2
+
+        // Créer un observer d'intersection
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                // Si l'élément est visible dans la fenêtre
+                if (entry.isIntersecting) {
+                    // Ajouter les classes pour rendre l'élément visible avec l'animation
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                } else {
+                    // Sinon, remettre les classes initiales
+                    entry.target.classList.remove('opacity-100', 'translate-y-0');
+                    entry.target.classList.add('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.5 }); // Observer lorsque 50% de l'élément est visible
+
+        // Observer l'élément H2
+        observer.observe(title);
+    });
     </script>
 @endpush

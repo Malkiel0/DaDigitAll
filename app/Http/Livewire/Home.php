@@ -15,6 +15,14 @@ class Home extends Component
     public $name = '';
     public $email = '';
     public $message = '';
+    public $companies = [
+        ['name' => 'Faghal MTN', 'logo' => 'img/faghallogo.jpeg'],
+        ['name' => 'Chalenge', 'logo' => 'img/chalengelogo.png'],
+        ['name' => 'Keyla Beauty', 'logo' => 'img/keylalogo.jpeg'],
+       
+    ];
+
+    
 
     protected $rules = [
         'name' => 'required|min:2',
@@ -25,6 +33,7 @@ class Home extends Component
     public function mount()
     {
         $this->showContent = true;
+        $this->dispatchBrowserEvent('start-carousel');
     }
 
     public function submit()
@@ -41,6 +50,9 @@ class Home extends Component
 
         $this->reset(['name', 'email', 'message']);
     }
+
+   
+  
 
     public function render()
     {
