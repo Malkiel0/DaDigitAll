@@ -42,164 +42,89 @@
         }
 
 
-        @keyframes float {
+        .digital-current {
+            background: linear-gradient(45deg, #4a0e8f, #6a11cb);
+            opacity: 0.7;
+        }
 
-            0%,
+        .electricity {
+            pointer-events: none;
+        }
+
+        @keyframes moveDots {
+            0% {
+                transform: translateY(0);
+            }
+
             100% {
-                transform: translate(0, 0);
-            }
-
-            50% {
-                transform: translate(0, 10px);
+                transform: translateY(-20px);
             }
         }
 
-        .floating {
-            animation: float 3s ease-in-out infinite;
+        .bg-gray-100 svg {
+            animation: moveDots 10s linear infinite;
         }
+
 
         @keyframes fadeInUp {
             from {
                 opacity: 0;
-                transform: translate3d(0, 20px, 0);
+                transform: translateY(20px);
             }
 
             to {
                 opacity: 1;
-                transform: translate3d(0, 0, 0);
+                transform: translateY(0);
             }
         }
 
-        .team-member {
-            opacity: 0;
+        .animate-fade-in-up {
             animation: fadeInUp 0.6s ease-out forwards;
+            opacity: 0;
         }
 
-        .team-member:nth-child(1) {
-            animation-delay: 0.1s;
+         /* Autres styles existants */
+        
+        /* Styles pour la section des entreprises de confiance */
+        #trusted-companies {
+            min-height: 60vh;
+            background: linear-gradient(to right, #1a237e, #311b92);
         }
 
-        .team-member:nth-child(2) {
-            animation-delay: 0.2s;
+        #trusted-companies .h-96 {
+            height: 40vh;
         }
 
-        .team-member:nth-child(3) {
-            animation-delay: 0.3s;
+        #trusted-companies img {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor;
+            max-height: 120px;
+            width: auto;
+            filter: contrast(1.1) brightness(1.1);
+            transform: translateZ(0);
+            backface-visibility: hidden;
         }
 
-        .team-member:nth-child(4) {
-            animation-delay: 0.4s;
+        #trusted-companies .grid-cols-4 {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
         }
 
-        .team-member:nth-child(5) {
-            animation-delay: 0.5s;
+        #trusted-companies .bg-white.bg-opacity-10 {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
         }
 
-        @keyframes wave {
-
-            0%,
-            100% {
-                transform: translate(0, 0);
+        @media (max-width: 768px) {
+            #trusted-companies .h-96 {
+                height: 30vh;
             }
-
-            50% {
-                transform: translate(-5px, -5px);
-            }
-        }
-
-        .wave-animation {
-            animation: wave 5s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translateY(0px);
-            }
-
-            50% {
-                transform: translateY(-20px);
-            }
-
-            100% {
-                transform: translateY(0px);
+            
+            #trusted-companies img {
+                max-height: 80px;
             }
         }
-
-        .float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes pulse {
-
-            0%,
-            100% {
-                opacity: 1;
-            }
-
-            50% {
-                opacity: 0.5;
-            }
-        }
-
-        .pulse {
-            animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-        }
-
-         /* Mobile-first design */
-    #trusted-companies {
-        position: relative;
-        background-color: #1a202c;
-        padding-top: 4rem;
-        padding-bottom: 4rem;
-    }
-
-    h2 {
-        font-size: 2.5rem; /* Titre ajusté pour mobile */
-    }
-
-    /* Grille des logos */
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* Par défaut, 4 colonnes */
-        gap: 1rem;
-    }
-
-    /* Responsive pour les petites tablettes */
-    @media (max-width: 640px) {
-        h2 {
-            font-size: 1.875rem; /* Taille plus petite pour les petits écrans */
-        }
-        .grid {
-            grid-template-columns: 1fr; /* Sur les petits écrans, une seule colonne */
-        }
-    }
-
-    /* Responsive pour tablettes et petits écrans */
-    @media (max-width: 768px) {
-        .grid {
-            grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur tablette */
-        }
-    }
-
-    /* Responsive pour écrans moyens (tablettes en paysage ou petits ordinateurs portables) */
-    @media (min-width: 1024px) {
-        .grid {
-            grid-template-columns: repeat(4, 1fr); /* Retour à 4 colonnes sur les écrans larges */
-        }
-    }
-
-    /* Responsive pour l'élément SVG */
-    @media (max-width: 640px) {
-        svg {
-            height: 5rem; /* Plus petit sur les petits écrans */
-        }
-    }
-
-    @media (min-width: 1024px) {
-        svg {
-            height: 6rem; /* Taille plus grande pour les grands écrans */
-        }
-    }
+       
     </style>
 @endpush
 
@@ -256,7 +181,7 @@
                             x-bind:class="{ 'opacity-100 translate-y-0': show, 'opacity-0 translate-y-4': !show }"
                             class="transition-all duration-500 ease-out">
                             <h2 class="text-3xl font-bold mb-6">Qui Sommes-Nous?</h2>
-                            <p class="text-lg mb-6">Nous somme spécialisé dans la transformation digitale ainsi que les
+                            <p class="text-lg mb-6 text-justify">Nous somme spécialisé dans la transformation digitale ainsi que les
                                 technologies de l'information et de la communication.</p>
                             <button
                                 class="bg-yellow-500 hover:bg-purple-600 text-white font-bold py-3 px-6 rounded-full transition duration-300">
@@ -267,14 +192,14 @@
                             x-bind:class="{ 'opacity-100 translate-y-0': show, 'opacity-0 translate-y-4': !show }"
                             class="transition-all duration-500 ease-out">
                             <h2 class="text-3xl font-bold mb-6">Notre Vision</h2>
-                            <p class="text-lg">Notre vision est d'être une référence en matière de transformation
+                            <p class="text-lg text-justify">Notre vision est d'être une référence en matière de transformation
                                 digitale et de conseils pour les entreprises du Bénin et de la sous-région.</p>
                         </div>
                         <div x-data="{ show: false }" x-init="setTimeout(() => show = true, 600)"
                             x-bind:class="{ 'opacity-100 translate-y-0': show, 'opacity-0 translate-y-4': !show }"
                             class="transition-all duration-500 ease-out">
                             <h2 class="text-3xl font-bold mb-6">Notre Mission</h2>
-                            <p class="text-lg">Notre mission est de conseiller et d'accompagner les entreprises,
+                            <p class="text-lg text-justify">Notre mission est de conseiller et d'accompagner les entreprises,
                                 petites, moyennes ou grandes, quel que soit le secteur d'activités, en leur fournissant
                                 des solutions matérielles, logicielles, organisationnelles sur mesure, afin d'améliorer
                                 leurs performances et les conduire à l'efficience.</p>
@@ -292,10 +217,10 @@
                 <svg class="w-full h-full" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                            <circle cx="2" cy="2" r="1" fill="#3B82F6" />
+                            <circle cx="2" cy="2" r="1" fill="#3B82F6"></circle>
                         </pattern>
                     </defs>
-                    <rect width="100%" height="100%" fill="url(#dots)" />
+                    <rect width="100%" height="100%" fill="url(#dots)"></rect>
                 </svg>
             </div>
 
@@ -305,15 +230,15 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <!-- Service 1 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="bg-white p-6 rounded-lg shadow-md" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
                         <div class="flex items-center mb-4">
                             <svg class="w-8 h-8 text-yellow-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path
-                                    d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838l-2.328.996.002.002 2.332-.998a1 1 0 00.562-.857l-.001-.002 1.796-.77 2.788 1.194a1 1 0 00.788 0l7-3a1 1 0 000-1.84l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zm5.99 7.176A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                                <path d="M13 7H7v6h6V7z"></path>
+                                <path fill-rule="evenodd" d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z" clip-rule="evenodd"></path>
                             </svg>
                             <h3 class="text-xl text-indigo-900 font-semibold">Transformation Digitale</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">En partant de l'analyse des processus métiers, à la conception de
+                        <p class="text-gray-600 mb-4 text-justify">En partant de l'analyse des processus métiers, à la conception de
                             solutions numériques, nous vous aidons à identifier les niveaux d'amélioration de tous les
                             processus métiers grâce à des outils appropriés pour vous fournir des solutions sur mesure
                             reliant célérité, sécurité, précision, optimisation des ressources et efficience.</p>
@@ -326,18 +251,16 @@
                     </div>
 
                     <!-- Service 2 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="bg-white p-6 rounded-lg shadow-md" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
                         <div class="flex items-center mb-4">
                             <svg class="w-8 h-8 text-yellow-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M13 7H7v6h6V7z" />
-                                <path fill-rule="evenodd"
-                                    d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z"
-                                    clip-rule="evenodd" />
+                                <path d="M13 7H7v6h6V7z"></path>
+                                <path fill-rule="evenodd" d="M7 2a1 1 0 012 0v1h2V2a1 1 0 112 0v1h2a2 2 0 012 2v2h1a1 1 0 110 2h-1v2h1a1 1 0 110 2h-1v2a2 2 0 01-2 2h-2v1a1 1 0 11-2 0v-1H9v1a1 1 0 11-2 0v-1H5a2 2 0 01-2-2v-2H2a1 1 0 110-2h1V9H2a1 1 0 010-2h1V5a2 2 0 012-2h2V2zM5 5h10v10H5V5z" clip-rule="evenodd"></path>
                             </svg>
                             <h3 class="text-xl text-indigo-900 font-semibold">Vente de matériel Informatique et de
                                 Réseau</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">Nous vous offrons des gammes complètes de matériels informatiques
+                        <p class="text-gray-600 mb-4 text-justify">Nous vous offrons des gammes complètes de matériels informatiques
                             (ordinateur, serveurs, logiciels, etc.) et de réseau (switch, routeur, firewalls, etc.)
                             grâce à notre large réseau de partenaire. Nous constituons un guichet unique pour tous vos
                             besoins en matériels, en simplifiant le processus d'achat pour l'acquisition à des coûts
@@ -350,16 +273,14 @@
                     </div>
 
                     <!-- Service 3 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="bg-white p-6 rounded-lg shadow-md" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
                         <div class="flex items-center mb-4">
                             <svg class="w-8 h-8 text-yellow-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z"
-                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path>
                             </svg>
                             <h3 class="text-xl text-indigo-900 font-semibold">Audit, Conseil et Accompagnement</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">Nous vous aidons à évaluer vos infrastructure et solutions
+                        <p class="text-gray-600 mb-4 text-justify">Nous vous aidons à évaluer vos infrastructure et solutions
                             informatiques, pour identifier les vulnérabilités et les risques de sécurités et proposons
                             des solutions pour mitiger votre supprimer ceux-ci. De plus nous vous accompagnons dans la
                             mise en œuvre de ces solutions en veillant à ce que les projets soient livrés à temps dans
@@ -374,16 +295,14 @@
                     </div>
 
                     <!-- Service 4 -->
-                    <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="bg-white p-6 rounded-lg shadow-md" style="opacity: 1; transform: translateY(0px); transition: opacity 0.5s, transform 0.5s;">
                         <div class="flex items-center mb-4">
                             <svg class="w-8 h-8 text-yellow-500 mr-3" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd"
-                                    d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z"
-                                    clip-rule="evenodd" />
+                                <path fill-rule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clip-rule="evenodd"></path>
                             </svg>
                             <h3 class="text-xl text-indigo-900 font-semibold">Assistance à Maîtrise d'ouvrage</h3>
                         </div>
-                        <p class="text-gray-600 mb-4">Grâce à notre expertise et expérience, nous accompagnons nos
+                        <p class="text-gray-600 mb-4 text-justify">Grâce à notre expertise et expérience, nous accompagnons nos
                             clients dans la mise en œuvre de projets divers par l'identification et formulation des
                             besoins, la définition des objectifs, le choix du meilleur prestataire et le suivi du projet
                             jusqu'au go live. Nous agissons comme un partenaire stratégique, travaillant en étroite
@@ -399,7 +318,6 @@
             </div>
         </div>
     </section>
-
     <section id="pourquoi-nous" class="relative min-h-[85vh] bg-white overflow-hidden">
         <!-- Arrière-plan avec cercles concentriques -->
         <div class="absolute inset-0">
@@ -641,56 +559,19 @@
         </svg>
 
         <!-- Contenu -->
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
             <div class="text-center mb-16">
                 <h2 class="text-base text-yellow-500 font-semibold tracking-wide uppercase">PORTFOLIO</h2>
                 <p class="mt-1 text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">Les
                     projets réalisés par notre équipe</p>
             </div>
 
-            <div class="mt-12 relative">
+            <div class="mt-12 relative text-justify">
                 <div class="overflow-hidden">
                     <div id="projectsContainer" class="flex space-x-8" id="projectsContainer">
-                        <!-- Shop Digit -->
-                        <div class="bg-white shadow rounded-lg flex-shrink-0 w-full sm:w-1/3">
-                            <img src="{{ asset('img/keylaShop.jpg') }}" alt="Shop Digit"
-                                class="w-full h-48 object-cover">
-                            <div class="p-5">
-                                <h3 class="text-xl font-semibold">Shop Digit</h3>
-                                <p class="text-orange-500 uppercase font-semibold">E-COMMERCE</p>
-                                <p class="mt-2 text-gray-600">Développement d'une plateforme de gestion des activités
-                                    de Keyla Shop pour la structure Keyla Distribution. Vente et gestion de stock aussi
-                                    bien en direction qu'en agence.</p>
-                                <div class="mt-4">
-                                    <span
-                                        class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">Plateforme
-                                        web</span>
-                                    <span
-                                        class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full mr-2">PHP</span>
-                                    <span
-                                        class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Laravel</span>
-                                </div>
-                            </div>
-                        </div>
+                       
 
-                        <!-- Master Digit -->
-                        <div class="bg-white shadow rounded-lg flex-shrink-0 w-full sm:w-1/3">
-                            <img src="{{ asset('img/file.jpg') }}" alt="Shop Digit" class="w-full h-48 object-cover">
-                            <div class="p-5">
-                                <h3 class="text-xl font-semibold">Master Digit</h3>
-                                <p class="text-orange-500 uppercase font-semibold">DIGITALISATION</p>
-                                <p class="mt-2 text-gray-600">Automatisation de tous les processus métiers en mettant à
-                                    la disposition de la structure Challenge Distribution, une plateforme unique en
-                                    ligne pour des interactions en temps réel.</p>
-                                <div class="mt-4">
-                                    <span
-                                        class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full mr-2">Plateforme
-                                        web</span>
-                                    <span
-                                        class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full">Laravel</span>
-                                </div>
-                            </div>
-                        </div>
+                       
 
                         <!-- Garage Digit -->
                         <div class="bg-white shadow rounded-lg flex-shrink-0 w-full sm:w-1/3">
@@ -741,7 +622,7 @@
             <h2 class="text-center text-yellow-500 text-xl font-semibold text-orange-500 mb-8">DÉCOUVREZ NOTRE ÉQUIPE
             </h2>
 
-            <p class="text-center text-gray-700 mb-16 max-w-3xl mx-auto">
+            <p class="text-center text-gray-700 mb-16 max-w-3xl mx-auto text-justify">
                 <span class="text-yellow-500">DA</span> <span class="text-indigo-900">DIGIT ALL</span> c'est une
                 équipe de jeune dynamique et innovante, constituée de profils experts et juniors,
                 complémentaires et variés, pour répondre aux besoins contemporains dans le domaine des nouvelles
@@ -776,14 +657,13 @@
                             <svg class="w-5 h-5 text-gray-400 hover:text-blue-700 transition-colors duration-200"
                                 fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
-                                    d="M16.338 16.338H13.67V12.16c0-.995-.017-2.277-1.387-2.277-1.39 0-1.601 1.086-1.601 2.207v4.248H8.014v-8.59h2.559v1.174h.037c.356-.675 1.227-1.387 2.526-1.387 2.703 0 3.203 1.778 3.203 4.092v4.711zM5.005 6.575a1.548 1.548 0 11-.003-3.096 1.548 1.548 0 01.003 3.096zm-1.337 9.763H6.34v-8.59H3.667v8.59zM17.668 1H2.328C1.595 1 1 1.581 1 2.298v15.403C1 18.418 1.595 19 2.328 19h15.34c.734 0 1.332-.582 1.332-1.299V2.298C19 1.581 18.402 1 17.668 1z"
+                                    d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                     clip-rule="evenodd" />
                             </svg>
                             <svg class="w-5 h-5 text-gray-400 hover:text-gray-700 transition-colors duration-200"
                                 fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd"
-                                    d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z"
-                                    clip-rule="evenodd" />
+                                    d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
                             </svg>
                         </div>
                     </div>
@@ -1046,7 +926,20 @@
     </section>
 </div>
 
+@push('styles')
+    <style>
+       
 
+
+       
+    </style>
+@endpush
+
+@push('styles')
+    <style>
+       
+    </style>
+@endpush
 
 @push('js')
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
@@ -1255,7 +1148,7 @@
                     title: "Stock Digit",
                     category: "DIGITALISATION",
                     image: "{{ asset('img/stockDigit.png') }}",
-                    description: "Automatisation de tous les processus métiers en mettant à la disposition de la structure Challenge Distribution, une plateforme unique en ligne pour des interactions en temps réel.",
+                    description: "Cette application est conçue pour simplifier et automatiser les processus de gestion de stock et de facturation du master distributeur Faghal. Elle offre des fonctionnalités modernes et intuitives pour répondre aux besoins spécifiques de gestion commerciale, tout en améliorant l'efficacité et la traçabilité des opérations.",
                     tags: ["Plateforme web", "Laravel"]
                 },
                 {
@@ -1472,7 +1365,7 @@
         const title = document.getElementById('trusted-companies-title'); // Sélectionner l'élément H2
 
         // Créer un observer d'intersection
-        const observer = new IntersectionObserver(entries => {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 // Si l'élément est visible dans la fenêtre
                 if (entry.isIntersecting) {

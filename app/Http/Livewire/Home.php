@@ -19,6 +19,7 @@ class Home extends Component
         ['name' => 'Faghal MTN', 'logo' => 'img/faghallogo.jpeg'],
         ['name' => 'Chalenge', 'logo' => 'img/chalengelogo.png'],
         ['name' => 'Keyla Beauty', 'logo' => 'img/keylalogo.jpeg'],
+        
        
     ];
 
