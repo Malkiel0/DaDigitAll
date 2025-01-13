@@ -353,123 +353,160 @@
         <!-- Contenu principal -->
         <div class="relative z-10 container mx-auto px-4 py-8 flex flex-col md:flex-row items-center">
             <!-- Colonne de gauche avec les logos technologiques -->
-            <div class="w-full md:w-1/2 relative h-96">
-                <svg class="w-full h-full" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <path id="circlePath" d="M200,200 m-150,0 a150,150 0 1,0 300,0 a150,150 0 1,0 -300,0"
-                            fill="none" />
-                    </defs>
-
-                    <!-- Connecting lines -->
-                    <path d="M200,200 m-150,0 a150,150 0 1,0 300,0 a150,150 0 1,0 -300,0" fill="none"
-                        stroke="#ccc" stroke-width="2" />
-
-                    <!-- Moving dot -->
-                    <circle r="5">
-                        <animateMotion dur="10s" repeatCount="indefinite">
-                            <mpath href="#circlePath" />
-                        </animateMotion>
-                        <animate attributeName="fill" dur="10s" repeatCount="indefinite"
-                            values="#F0DB4F;#777BB3;#000000;#96588A;#61dafb;#FF2D20;#21759B;#F0DB4F" />
-                    </circle>
-
-                    <!-- JS logo -->
-                    <g transform="translate(200, 50)">
-                        <circle r="30" fill="#F0DB4F">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; -5,5; 0,0"
-                                dur="4s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4s"
-                                repeatCount="indefinite" />
-                        </circle>
-                        <text y="10" text-anchor="middle" fill="black" font-size="24" font-weight="bold">JS</text>
+            <svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <!-- Gradients -->
+                    <linearGradient id="techGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1">
+                            <animate attributeName="stop-color" values="#1a1a1a;#2a2a2a;#1a1a1a" dur="3s" repeatCount="indefinite"/>
+                        </stop>
+                        <stop offset="100%" style="stop-color:#2a2a2a;stop-opacity:1">
+                            <animate attributeName="stop-color" values="#2a2a2a;#3a3a3a;#2a2a2a" dur="3s" repeatCount="indefinite"/>
+                        </stop>
+                    </linearGradient>
+            
+                    <!-- Filtre pour l'effet de lueur -->
+                    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+            
+                    <!-- Animation pour les lignes -->
+                    <pattern id="pattern-line" width="8" height="1" patternUnits="userSpaceOnUse">
+                        <rect width="4" height="1" fill="white">
+                            <animate attributeName="x" values="-4;4;-4" dur="1s" repeatCount="indefinite"/>
+                        </rect>
+                    </pattern>
+                </defs>
+            
+                <!-- Fond -->
+                <rect width="800" height="800" fill="url(#techGradient)"/>
+            
+                <!-- Groupe principal avec les connexions -->
+                <g transform="translate(400, 400)">
+                    <!-- Lignes de connexion animées -->
+                    <g stroke-width="1" opacity="0.5">
+                        <!-- Lignes horizontales -->
+                        <line x1="-300" y1="0" x2="300" y2="0" stroke="url(#pattern-line)">
+                            <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite"/>
+                        </line>
+                        <line x1="-250" y1="-100" x2="250" y2="-100" stroke="url(#pattern-line)">
+                            <animate attributeName="opacity" values="0.5;0.2;0.5" dur="4s" repeatCount="indefinite"/>
+                        </line>
+                        <line x1="-250" y1="100" x2="250" y2="100" stroke="url(#pattern-line)">
+                            <animate attributeName="opacity" values="0.2;0.5;0.2" dur="3.5s" repeatCount="indefinite"/>
+                        </line>
+            
+                        <!-- Lignes diagonales -->
+                        <line x1="-200" y1="-200" x2="200" y2="200" stroke="url(#pattern-line)">
+                            <animate attributeName="opacity" values="0.5;0.2;0.5" dur="5s" repeatCount="indefinite"/>
+                        </line>
+                        <line x1="-200" y1="200" x2="200" y2="-200" stroke="url(#pattern-line)">
+                            <animate attributeName="opacity" values="0.2;0.5;0.2" dur="4.5s" repeatCount="indefinite"/>
+                        </line>
                     </g>
-
-                    <!-- PHP logo -->
-                    <g transform="translate(338, 150)">
-                        <circle r="30" fill="#777BB3">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; 8,-3; 0,0"
-                                dur="5s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="5s"
-                                repeatCount="indefinite" />
+            
+                    <!-- Technologies -->
+                    <!-- Centre - Flutter -->
+                    <g filter="url(#glow)">
+                        <circle r="50" fill="#FA7343">
+                            <animate attributeName="r" values="50;52;50" dur="2s" repeatCount="indefinite"/>
                         </circle>
-                        <text y="10" text-anchor="middle" fill="white" font-size="24"
-                            font-weight="bold">PHP</text>
-                    </g>
-
-                    <!-- iOS logo -->
-                    <g transform="translate(338, 250)">
-                        <circle r="30" fill="#000000">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; -6,6; 0,0"
-                                dur="3.5s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3.5s"
-                                repeatCount="indefinite" />
+                        <text y="8" text-anchor="middle" fill="white" font-size="20" font-weight="bold">Laravel</text>
+                        <circle r="55" fill="none" stroke="#45D1FD" stroke-width="2">
+                            <animate attributeName="r" values="55;60;55" dur="2s" repeatCount="indefinite"/>
+                            <animate attributeName="opacity" values="1;0;1" dur="2s" repeatCount="indefinite"/>
                         </circle>
-                        <text y="10" text-anchor="middle" fill="white" font-size="24">iOS</text>
                     </g>
-
-                    <!-- WooCommerce logo -->
-                    <g transform="translate(200, 350)">
-                        <circle r="30" fill="#96588A">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; 7,-7; 0,0"
-                                dur="4.5s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4.5s"
-                                repeatCount="indefinite" />
+            
+                    <!-- Technologies autour -->
+                    <!-- JavaScript -->
+                    <g transform="translate(-150, -150)" filter="url(#glow)">
+                        <circle r="35" fill="#F0DB4F">
+                            <animate attributeName="r" values="35;37;35" dur="3s" repeatCount="indefinite"/>
                         </circle>
-                        <text y="10" text-anchor="middle" fill="white" font-size="18"
-                            font-weight="bold">Woo</text>
+                        <text y="5" text-anchor="middle" fill="black" font-size="14">JS</text>
                     </g>
-
-                    <!-- React logo (blue circle, white logo) -->
-                    <g transform="translate(62, 250)">
-                        <circle r="30" fill="#61dafb">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; -4,4; 0,0"
-                                dur="3.8s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="3.8s"
-                                repeatCount="indefinite" />
+            
+                    <!-- TypeScript -->
+                    <g transform="translate(150, -150)" filter="url(#glow)">
+                        <circle r="35" fill="#007ACC">
+                            <animate attributeName="r" values="35;37;35" dur="2.8s" repeatCount="indefinite"/>
                         </circle>
-                        <g transform="scale(0.15)">
-                            <circle cx="0" cy="0" r="20" fill="white" />
-                            <g stroke="white" stroke-width="10" fill="none">
-                                <ellipse rx="110" ry="42">
-                                    <animateTransform attributeName="transform" type="rotate" from="0"
-                                        to="360" dur="10s" repeatCount="indefinite" />
-                                </ellipse>
-                                <ellipse rx="110" ry="42" transform="rotate(60)">
-                                    <animateTransform attributeName="transform" type="rotate" from="60"
-                                        to="420" dur="10s" repeatCount="indefinite" />
-                                </ellipse>
-                                <ellipse rx="110" ry="42" transform="rotate(120)">
-                                    <animateTransform attributeName="transform" type="rotate" from="120"
-                                        to="480" dur="10s" repeatCount="indefinite" />
-                                </ellipse>
-                            </g>
-                        </g>
+                        <text y="5" text-anchor="middle" fill="white" font-size="14">TS</text>
                     </g>
-
-                    <!-- Laravel logo -->
-                    <g transform="translate(62, 150)">
-                        <circle r="30" fill="#FF2D20">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; 5,-5; 0,0"
-                                dur="4.2s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4.2s"
-                                repeatCount="indefinite" />
+            
+                    <!-- Python -->
+                    <g transform="translate(200, 0)" filter="url(#glow)">
+                        <circle r="35" fill="#3776AB">
+                            <animate attributeName="r" values="35;37;35" dur="3.2s" repeatCount="indefinite"/>
                         </circle>
-                        <text y="10" text-anchor="middle" fill="white" font-size="18"
-                            font-weight="bold">Laravel</text>
+                        <text y="5" text-anchor="middle" fill="white" font-size="14">Python</text>
                     </g>
-
-                    <!-- WordPress logo -->
-                    <g transform="translate(200, 200)">
-                        <circle r="30" fill="#21759B">
-                            <animateTransform attributeName="transform" type="translate" values="0,0; -6,-6; 0,0"
-                                dur="4.7s" repeatCount="indefinite" />
-                            <animate attributeName="opacity" values="0.8;1;0.8" dur="4.7s"
-                                repeatCount="indefinite" />
+            
+                    <!-- Java -->
+                    <g transform="translate(150, 150)" filter="url(#glow)">
+                        <circle r="35" fill="#007396">
+                            <animate attributeName="r" values="35;37;35" dur="2.5s" repeatCount="indefinite"/>
                         </circle>
-                        <text y="10" text-anchor="middle" fill="white" font-size="16" font-weight="bold">WP</text>
+                        <text y="5" text-anchor="middle" fill="white" font-size="14">Java</text>
                     </g>
-                </svg>
-            </div>
+            
+                    <!-- PHP -->
+                    <g transform="translate(-150, 150)" filter="url(#glow)">
+                        <circle r="35" fill="#777BB4">
+                            <animate attributeName="r" values="35;37;35" dur="2.7s" repeatCount="indefinite"/>
+                        </circle>
+                        <text y="5" text-anchor="middle" fill="white" font-size="14">PHP</text>
+                    </g>
+            
+                    <!-- Kotlin -->
+                    <g transform="translate(-200, 0)" filter="url(#glow)">
+                        <circle r="35" fill="#21759B">
+                            <animate attributeName="r" values="35;37;35" dur="2.9s" repeatCount="indefinite"/>
+                        </circle>
+                        <text y="5" text-anchor="middle" fill="white" font-size="14">Wp</text>
+                    </g>
+            
+                    <!-- Swift -->
+                    <g transform="translate(0, -200)" filter="url(#glow)">
+                        <circle r="35" fill="#02569B">
+                            <animate attributeName="r" values="35;37;35" dur="3.1s" repeatCount="indefinite"/>
+                        </circle>
+                        <text y="5" text-anchor="middle" fill="white" font-size="14">Flutter</text>
+                    </g>
+            
+                    <!-- React -->
+                    <g transform="translate(0, 200)" filter="url(#glow)">
+                        <circle r="35" fill="#61DAFB">
+                            <animate attributeName="r" values="35;37;35" dur="2.6s" repeatCount="indefinite"/>
+                        </circle>
+                        <text y="5" text-anchor="middle" fill="white" font-size="14">React</text>
+                    </g>
+            
+                    <!-- Particules animées -->
+                    <g>
+                        <circle r="2" fill="white">
+                            <animateMotion dur="10s" repeatCount="indefinite" 
+                                path="M 0,0 C 100,-100 200,-100 300,0 C 200,100 100,100 0,0"/>
+                            <animate attributeName="opacity" values="0;1;0" dur="10s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle r="2" fill="#45D1FD">
+                            <animateMotion dur="8s" repeatCount="indefinite"
+                                path="M 0,0 C -100,-100 -200,-100 -300,0 C -200,100 -100,100 0,0"/>
+                            <animate attributeName="opacity" values="0;1;0" dur="8s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle r="2" fill="#FA7343">
+                            <animateMotion dur="12s" repeatCount="indefinite"
+                                path="M 0,0 C 100,100 100,200 0,300 C -100,200 -100,100 0,0"/>
+                            <animate attributeName="opacity" values="0;1;0" dur="12s" repeatCount="indefinite"/>
+                        </circle>
+                    </g>
+                </g>
+            </svg>
 
             <!-- Colonne de droite avec le texte -->
             <div class="w-full md:w-1/2 mt-8 md:mt-0 md:pl-8">
