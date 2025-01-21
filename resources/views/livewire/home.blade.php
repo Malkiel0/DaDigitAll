@@ -139,7 +139,7 @@
             <div class="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-12">
                 <h2 class="text-yellow-500 font-bold mb-4 text-xl opacity-0 transform translate-y-4 transition-all duration-500 ease-out"
                     x-data="{ show: false }" x-init="setTimeout(() => show = true, 100)" x-bind:class="{ 'translate-y-0 opacity-100': show }">
-                    <span class="text-yellow-500">DA</span> <span class="text-indigo-900">DIGIT ALL</span>
+                    <span class="text-yellow-500">DA</span> <span class="text-yellow-500">DIGIT ALL</span>
                 </h2>
                 <h1 class="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 text-white opacity-0 transform translate-y-4 transition-all duration-500 ease-out"
                     x-data="{ show: false }" x-init="setTimeout(() => show = true, 300)"
@@ -511,7 +511,7 @@
             <!-- Colonne de droite avec le texte -->
             <div class="w-full md:w-1/2 mt-8 md:mt-0 md:pl-8">
                 <h2 class="text-2xl text-black font-bold text-orange-500 mb-2 animate-fade-in-up">POURQUOI
-                    <span class="text-yellow-500">DA</span> <span class="text-indigo-900">DIGIT ALL</span> ?
+                    <span class="text-yellow-500">DA</span> <span class="text-yellow-500">DIGIT ALL</span> ?
                 </h2>
                 <h1 class="text-4xl font-bold mb-4 animate-fade-in-up" style="animation-delay: 0.2s;">Faites évoluer
                     votre entreprise</h1>
@@ -660,7 +660,7 @@
             </h2>
 
             <p class="text-center text-gray-700 mb-16 max-w-3xl mx-auto text-justify">
-                <span class="text-yellow-500">DA</span> <span class="text-indigo-900">DIGIT ALL</span> c'est une
+                <span class="text-yellow-500">DA</span> <span class="text-yellow-500">DIGIT ALL</span> c'est une
                 équipe de jeune dynamique et innovante, constituée de profils experts et juniors,
                 complémentaires et variés, pour répondre aux besoins contemporains dans le domaine des nouvelles
                 technologies et de
@@ -675,7 +675,7 @@
                 Réputation</h3>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                @foreach ([['name' => 'Mathias DEKADJEVI', 'role' => 'CEO Founder', 'image' => 'img/mathias.jpg'], ['name' => 'Anselme Victor AKPOVI', 'role' => 'Développeur Web', 'image' => 'img/anselme.jpg'], ['name' => 'Shiv GODONOU', 'role' => 'Ingénieur Réseaux informatiques et télécoms', 'image' => 'img/ulysse.jpg'], ['name' => 'Eden AHOUSSOU', 'role' => 'Développeur Web', 'image' => 'img/eden.jpg'], ['name' => 'Banel SEMASSOUSSI', 'role' => 'Développeur Web', 'image' => 'img/banel.jpg'], ['name' => 'Emmeran Malkiel LIMA', 'role' => 'Developpeur frontend', 'image' => 'img/emmeran.jpg'], ['name' => 'Laurette GANGBADJA', 'role' => 'Assistante de direction', 'image' => 'img/laurette.jpg']] as $member)
+                @foreach ([['name' => 'Mathias DEKADJEVI', 'role' => 'CEO Founder', 'image' => 'img/mathias.jpg'], ['name' => 'Laurette GANGBADJA', 'role' => 'Assistante de direction', 'image' => 'img/laurette.jpg'], ['name' => 'Anselme Victor AKPOVI', 'role' => 'Développeur Web', 'image' => 'img/anselme.jpg'], ['name' => 'Shiv GODONOU', 'role' => 'Ingénieur Réseaux informatiques et télécoms', 'image' => 'img/ulysse.jpg'], ['name' => 'Eden AHOUSSOU', 'role' => 'Développeur Web', 'image' => 'img/eden.jpg'], ['name' => 'Banel SEMASSOUSSI', 'role' => 'Développeur Web', 'image' => 'img/banel.jpg']] as $member)
                     <div class="flex flex-col items-center space-y-4 group">
                         <div
                             class="relative w-32 h-40 rounded-full overflow-hidden transition-transform duration-300 transform group-hover:scale-110">
