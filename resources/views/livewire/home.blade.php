@@ -1,135 +1,3 @@
-@push('styles')
-    <style>
-        .digital-current {
-            background: linear-gradient(45deg, #4a0e8f, #6a11cb);
-            opacity: 0.7;
-        }
-
-        .electricity {
-            pointer-events: none;
-        }
-
-        @keyframes moveDots {
-            0% {
-                transform: translateY(0);
-            }
-
-            100% {
-                transform: translateY(-20px);
-            }
-        }
-
-        .bg-gray-100 svg {
-            animation: moveDots 10s linear infinite;
-        }
-
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-
-        .digital-current {
-            background: linear-gradient(45deg, #4a0e8f, #6a11cb);
-            opacity: 0.7;
-        }
-
-        .electricity {
-            pointer-events: none;
-        }
-
-        @keyframes moveDots {
-            0% {
-                transform: translateY(0);
-            }
-
-            100% {
-                transform: translateY(-20px);
-            }
-        }
-
-        .bg-gray-100 svg {
-            animation: moveDots 10s linear infinite;
-        }
-
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .animate-fade-in-up {
-            animation: fadeInUp 0.6s ease-out forwards;
-            opacity: 0;
-        }
-
-         /* Autres styles existants */
-        
-        /* Styles pour la section des entreprises de confiance */
-        #trusted-companies {
-            min-height: 60vh;
-            background: linear-gradient(to right, #1a237e, #311b92);
-        }
-
-        #trusted-companies .h-96 {
-            height: 40vh;
-        }
-
-        #trusted-companies img {
-            image-rendering: -webkit-optimize-contrast;
-            image-rendering: crisp-edges;
-            -ms-interpolation-mode: nearest-neighbor;
-            max-height: 120px;
-            width: auto;
-            filter: contrast(1.1) brightness(1.1);
-            transform: translateZ(0);
-            backface-visibility: hidden;
-        }
-
-        #trusted-companies .grid-cols-4 {
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        }
-
-        #trusted-companies .bg-white.bg-opacity-10 {
-            background-color: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-        }
-
-        @media (max-width: 768px) {
-            #trusted-companies .h-96 {
-                height: 30vh;
-            }
-            
-            #trusted-companies img {
-                max-height: 80px;
-            }
-        }
-       
-    </style>
-@endpush
-
-
-
 <div>
     <section class="relative overflow-hidden bg-gradient-to-br from-gray-900 to-blue-900" style="height: 90vh;">
         <div class="absolute inset-0" wire:ignore>
@@ -137,7 +5,7 @@
         </div>
         <div class="relative z-10 flex h-full items-center">
             <div class="w-full md:w-1/2 flex flex-col justify-center px-6 md:px-12">
-                <h2 class="text-yellow-500 font-bold mb-4 text-xl opacity-0 transform translate-y-4 transition-all duration-500 ease-out"
+                <h2 class="text-yellow-500 font-bold mb-4 pt-12 text-xl opacity-0 transform translate-y-4 transition-all duration-500 ease-out"
                     x-data="{ show: false }" x-init="setTimeout(() => show = true, 100)" x-bind:class="{ 'translate-y-0 opacity-100': show }">
                     <span class="text-yellow-500">DA</span> <span class="text-yellow-500">DIGIT ALL</span>
                 </h2>
@@ -242,7 +110,7 @@
                             solutions numériques, nous vous aidons à identifier les niveaux d'amélioration de tous les
                             processus métiers grâce à des outils appropriés pour vous fournir des solutions sur mesure
                             reliant célérité, sécurité, précision, optimisation des ressources et efficience.</p>
-                        <div class="flex space-x-2">
+                        <div class="flex flex-wrap gap-2">
                             <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Site Web</span>
                             <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Application
                                 Mobile</span>
@@ -265,7 +133,7 @@
                             grâce à notre large réseau de partenaire. Nous constituons un guichet unique pour tous vos
                             besoins en matériels, en simplifiant le processus d'achat pour l'acquisition à des coûts
                             compétitifs.</p>
-                        <div class="flex space-x-2">
+                        <div class="flex flex-wrap gap-2">
                             <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Management</span>
                             <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Installation</span>
                             <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Configuration</span>
@@ -286,7 +154,7 @@
                             mise en œuvre de ces solutions en veillant à ce que les projets soient livrés à temps dans
                             le respect des budgets et spécifications. Enfin nous offrons de la formation et du transfert
                             de compétence à divers niveaux.</p>
-                        <div class="flex space-x-2">
+                        <div class="flex flex-wrap gap-2">
                             <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Stratégie</span>
                             <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Conseil</span>
                             <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Formation</span>
@@ -309,7 +177,7 @@
                             collaboration avec les équipes internes de nos clients. Nous jouons un rôle clé dans la
                             gestion du projet en veillant à ce que les ressources, les délais et les coûts soient
                             maîtrisés.</p>
-                        <div class="flex space-x-2">
+                        <div class="flex flex-wrap gap-2">
                             <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Projet</span>
                             <span class="px-2 py-1 bg-yellow-500 text-indigo-900 text-sm rounded">Assistance</span>
                         </div>
@@ -675,7 +543,7 @@
                 Réputation</h3>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-                @foreach ([['name' => 'Mathias DEKADJEVI', 'role' => 'CEO Founder', 'image' => 'img/mathias.jpg'], ['name' => 'Laurette GANGBADJA', 'role' => 'Assistante de direction', 'image' => 'img/laurette.jpg'], ['name' => 'Anselme Victor AKPOVI', 'role' => 'Développeur Web', 'image' => 'img/anselme.jpg'], ['name' => 'Shiv GODONOU', 'role' => 'Ingénieur Réseaux informatiques et télécoms', 'image' => 'img/ulysse.jpg'], ['name' => 'Eden AHOUSSOU', 'role' => 'Développeur Web', 'image' => 'img/eden.jpg'], ['name' => 'Banel SEMASSOUSSI', 'role' => 'Développeur Web', 'image' => 'img/banel.jpg']] as $member)
+                @foreach ([['name' => 'Mathias DEKADJEVI', 'role' => 'CEO Founder', 'image' => 'img/mathias.jpg'], ['name' => 'Laurette GANGBADJA', 'role' => 'Assistante de direction', 'image' => 'img/laurette.jpg'], ['name' => 'Anselme Victor AKPOVI', 'role' => 'Développeur Web', 'image' => 'img/anselme.jpg'], ['name' => 'Shiv GODONOU', 'role' => 'Ingénieur Réseaux informatiques et télécoms', 'image' => 'img/ulysse.jpg'], ['name' => 'Eden AHOUSSOU', 'role' => 'Développeur Web', 'image' => 'img/eden.jpg'], ['name' => 'Banel SEMASSOUSSI', 'role' => 'Développeur Web', 'image' => 'img/banel.jpg'], ['name' => 'Emmeran Malkiel LIMA', 'role' => 'Développeur front-end', 'image' => 'img/emmeran.jpeg']] as $member)
                     <div class="flex flex-col items-center space-y-4 group">
                         <div
                             class="relative w-32 h-40 rounded-full overflow-hidden transition-transform duration-300 transform group-hover:scale-110">
@@ -965,18 +833,52 @@
 
 @push('styles')
     <style>
-       
+        /* Autres styles existants */
+        
+        /* Styles pour la section des entreprises de confiance */
+        #trusted-companies {
+            min-height: 60vh;
+            background: linear-gradient(to right, #1a237e, #311b92);
+        }
 
+        #trusted-companies .h-96 {
+            height: 40vh;
+        }
 
+        #trusted-companies img {
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            -ms-interpolation-mode: nearest-neighbor;
+            max-height: 120px;
+            width: auto;
+            filter: contrast(1.1) brightness(1.1);
+            transform: translateZ(0);
+            backface-visibility: hidden;
+        }
+
+        #trusted-companies .grid-cols-4 {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+
+        #trusted-companies .bg-white.bg-opacity-10 {
+            background-color: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        @media (max-width: 768px) {
+            #trusted-companies .h-96 {
+                height: 30vh;
+            }
+            
+            #trusted-companies img {
+                max-height: 80px;
+            }
+        }
        
     </style>
 @endpush
 
-@push('styles')
-    <style>
-       
-    </style>
-@endpush
+
 
 @push('js')
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
